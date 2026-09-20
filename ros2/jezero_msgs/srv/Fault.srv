@@ -1,0 +1,6 @@
+string phase
+string description
+string terrain_words
+---
+string answers_json
+float32 latency_ms

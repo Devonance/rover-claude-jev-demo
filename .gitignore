@@ -1,0 +1,40 @@
+# dependencies and build output
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+ros2/**/build/
+ros2/**/install/
+ros2/**/log/
+
+# secrets
+.env
+*.pem
+*.key
+
+# recordings, screenshots and scratch output (large, regenerable)
+out/
+shots/
+*.webm
+*.mp4
+*.zip
+# ...except the web-sized cut the README embeds
+!docs/jezero-ops-demo-720p.mp4
+
+# LaTeX intermediates
+docs/*.log
+docs/*.aux
+docs/*.out
+docs/*.toc
+
+# source assets that are only inputs to the build (the derived assets are committed)
+assets/raw/
+assets/out/
+public/assets/rocks/raw/
+
+# one-off patch scripts from the build sessions, kept locally, not part of the project
+tools/patches/
+
+# OS noise
+.DS_Store
+Thumbs.db

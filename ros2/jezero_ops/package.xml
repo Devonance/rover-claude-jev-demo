@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>jezero_ops</name>
+  <version>0.2.0</version>
+  <description>Jezero Ops decision graph: perception -> jev (System One) -> ENav (code) -> executive; Claude (System Two) as the ground segment.</description>
+  <maintainer email="kevinleehorton@gmail.com">Kevin Horton</maintainer>
+  <license>MIT</license>
+  <depend>rclpy</depend>
+  <depend>jezero_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <exec_depend>rosbridge_server</exec_depend>
+  <exec_depend>python3-requests</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-scipy</exec_depend>
+  <exec_depend>python3-pil</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

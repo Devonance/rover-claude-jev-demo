@@ -1,0 +1,17 @@
+string id
+string lane
+string key
+string target
+string label
+string short_label
+float32 start
+float32 dur
+float32 end
+bool has_end
+float32 wh
+float32 mb
+string status
+string tag
+string reason
+bool has_verify
+float32[3] verify

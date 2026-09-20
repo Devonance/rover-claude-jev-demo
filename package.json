@@ -1,0 +1,21 @@
+{
+  "name": "jezero-ops",
+  "version": "1.0.0",
+  "description": "Perseverance rover-ops sim: Claude plans, jev judges, code drives.",
+  "type": "commonjs",
+  "license": "ISC",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server/index.mjs",
+    "smoke": "node tools/shoot.mjs http://localhost:4180/ shots/boot.png 8000",
+    "autorun": "node tools/autorun.mjs shots/run",
+    "record": "node tools/record.mjs out/run.webm"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "playwright": "^1.63.0",
+    "roslib": "^1.4.1",
+    "three": "^0.186.0",
+    "zod": "^4.6.5"
+  }
+}

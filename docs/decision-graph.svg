@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1180" viewBox="0 0 2000 1180" font-family="ui-monospace, Consolas, Menlo, monospace">
+<rect width="2000" height="1180" fill="#0b0d10"/>
+<text x="40" y="70" fill="#c9d1d9" font-size="22" font-weight="700">JEZERO OPS · DECISION GRAPH</text>
+<text x="40" y="96" fill="#7f8b98" font-size="13">state → jev typed questions (live answers) → code gates → actions · highlighted: one real imaging cycle, sol 1, odometer 57 m — a ripple field becomes a keep-out and the route bends</text>
+<text x="40" y="136" fill="#7f8b98" font-size="11" letter-spacing="2">STATE (words &amp; structured fields)</text>
+<text x="590" y="136" fill="#d9a441" font-size="11" letter-spacing="2">JEV · SYSTEM ONE (≈200 ms, one request per column)</text>
+<text x="1100" y="136" fill="#5aa7e6" font-size="11" letter-spacing="2">CODE · GATES &amp; GEOMETRY</text>
+<text x="1630" y="136" fill="#4fd18b" font-size="11" letter-spacing="2">ACTIONS</text>
+<text x="590" y="18" fill="#b48cff" font-size="11" letter-spacing="2">CLAUDE · SYSTEM TWO (15–80 s, a few times per sol)</text>
+<path d="M510,352.0 C550.0,352.0 550.0,177.0 590,177.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M510,352.0 C550.0,352.0 550.0,247.0 590,247.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M510,352.0 C550.0,352.0 550.0,317.0 590,317.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M510,352.0 C550.0,352.0 550.0,387.0 590,387.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M1400,177.0 C1515.0,177.0 1515.0,247.0 1630,247.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M840,247.0 C970.0,247.0 970.0,387.0 1100,387.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M1100,387.0 C1250.0,387.0 1250.0,566.0 1250.0,566.0 S1400,566.0 1400,532.0" fill="none" stroke="#3a4450" stroke-width="1.2" stroke-dasharray="6 5" opacity="0.55"/>
+<path d="M840,387.0 C970.0,387.0 970.0,457.0 1100,457.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M1400,457.0 C1515.0,457.0 1515.0,457.0 1630,457.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M710.0,84 C710.0,252.0 275.0,252.0 275.0,420" fill="none" stroke="#3a4450" stroke-width="1.2" stroke-dasharray="6 5" opacity="0.55"/>
+<path d="M510,452.0 C550.0,452.0 550.0,477.0 590,477.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M510,547.0 C550.0,547.0 550.0,477.0 590,477.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M510,547.0 C550.0,547.0 550.0,547.0 590,547.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M510,627.0 C550.0,627.0 550.0,617.0 590,617.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M1340.0,84 C1340.0,302.0 275.0,302.0 275.0,520" fill="none" stroke="#3a4450" stroke-width="1.2" stroke-dasharray="6 5" opacity="0.55"/>
+<path d="M840,477.0 C970.0,477.0 970.0,617.0 1100,617.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M840,547.0 C970.0,547.0 970.0,617.0 1100,617.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M840,617.0 C970.0,617.0 970.0,617.0 1100,617.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M1100,617.0 C1250.0,617.0 1250.0,721.0 1250.0,721.0 S1400,721.0 1400,687.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M1400,687.0 C1515.0,687.0 1515.0,592.0 1630,592.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M1795.0,560 C1795.0,322.0 1030.0,322.0 1030.0,84" fill="none" stroke="#3a4450" stroke-width="1.2" stroke-dasharray="6 5" opacity="0.55"/>
+<path d="M510,732.0 C550.0,732.0 550.0,707.0 590,707.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M510,732.0 C550.0,732.0 550.0,777.0 590,777.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M510,732.0 C550.0,732.0 550.0,847.0 590,847.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M840,777.0 C970.0,777.0 970.0,767.0 1100,767.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M1400,767.0 C1515.0,767.0 1515.0,767.0 1630,767.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M840,847.0 C970.0,847.0 970.0,837.0 1100,837.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M840,707.0 C970.0,707.0 970.0,837.0 1100,837.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M1400,837.0 C1515.0,837.0 1515.0,842.0 1630,842.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M1795.0,810 C1795.0,447.0 1640.0,447.0 1640.0,84" fill="none" stroke="#3a4450" stroke-width="1.2" stroke-dasharray="6 5" opacity="0.55"/>
+<path d="M510,832.0 C550.0,832.0 550.0,927.0 590,927.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M510,932.0 C550.0,932.0 550.0,927.0 590,927.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M510,932.0 C550.0,932.0 550.0,997.0 590,997.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M510,627.0 C550.0,627.0 550.0,1067.0 590,1067.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M840,927.0 C970.0,927.0 970.0,962.0 1100,962.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M840,997.0 C970.0,997.0 970.0,962.0 1100,962.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M840,1067.0 C970.0,1067.0 970.0,962.0 1100,962.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M1400,962.0 C1515.0,962.0 1515.0,962.0 1630,962.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M1400,962.0 C1515.0,962.0 1515.0,1057.0 1630,1057.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M510,182.0 C550.0,182.0 550.0,177.0 590,177.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M510,182.0 C550.0,182.0 550.0,247.0 590,247.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M510,182.0 C550.0,182.0 550.0,317.0 590,317.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M510,182.0 C550.0,182.0 550.0,387.0 590,387.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M510,267.0 C550.0,267.0 550.0,177.0 590,177.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M510,267.0 C550.0,267.0 550.0,247.0 590,247.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M510,267.0 C550.0,267.0 550.0,317.0 590,317.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M510,267.0 C550.0,267.0 550.0,387.0 590,387.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M840,177.0 C970.0,177.0 970.0,177.0 1100,177.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1100,177.0 C1250.0,177.0 1250.0,281.0 1250.0,281.0 S1400,281.0 1400,247.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M840,177.0 C970.0,177.0 970.0,247.0 1100,247.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M840,317.0 C970.0,317.0 970.0,317.0 1100,317.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1400,317.0 C1515.0,317.0 1515.0,317.0 1630,317.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1630,317.0 C1515.0,317.0 1515.0,566.0 1515.0,566.0 S1400,566.0 1400,532.0" fill="none" stroke="#4fd18b" stroke-width="2.4" stroke-dasharray="6 5" opacity="1"/>
+<path d="M1400,532.0 C1515.0,532.0 1515.0,177.0 1630,177.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<rect x="560" y="30" width="300" height="54" rx="8" fill="#12181f" stroke="#b48cff" stroke-width="2" opacity="1"/>
+<text x="572" y="51" fill="#c9d1d9" font-size="13" font-weight="600">CLAUDE · plan_sol</text>
+<text x="572" y="70" fill="#b48cff" font-size="11.5">criteria → jev; drive goal; budget</text>
+<rect x="900" y="30" width="260" height="54" rx="8" fill="#0f1317" stroke="#b48cff" stroke-width="1.2" opacity="1"/>
+<text x="912" y="51" fill="#c9d1d9" font-size="13" font-weight="600">CLAUDE · interpret</text>
+<text x="912" y="70" fill="#7f8b98" font-size="11.5">lithology, next_action</text>
+<rect x="1200" y="30" width="280" height="54" rx="8" fill="#0f1317" stroke="#b48cff" stroke-width="1.2" opacity="1"/>
+<text x="1212" y="51" fill="#c9d1d9" font-size="13" font-weight="600">CLAUDE · describe (vision)</text>
+<text x="1212" y="70" fill="#7f8b98" font-size="11.5">reads the Navcam frame</text>
+<rect x="1520" y="30" width="240" height="54" rx="8" fill="#0f1317" stroke="#b48cff" stroke-width="1.2" opacity="1"/>
+<text x="1532" y="51" fill="#c9d1d9" font-size="13" font-weight="600">CLAUDE · anomaly</text>
+<text x="1532" y="70" fill="#7f8b98" font-size="11.5">diagnosis, constraints</text>
+<rect x="40" y="150" width="470" height="64" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="52" y="171" fill="#c9d1d9" font-size="13" font-weight="600">navcam feature v7_0</text>
+<text x="52" y="190" fill="#4fd18b" font-size="11.5">bright fine-grained patch ~8 m, low regular ripples · 6.5 m, well left</text>
+<rect x="40" y="240" width="470" height="54" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="52" y="261" fill="#c9d1d9" font-size="13" font-weight="600">sun</text>
+<text x="52" y="280" fill="#4fd18b" font-size="11.5">low in the east, long shadows</text>
+<rect x="40" y="320" width="470" height="64" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2" opacity="0.72"/>
+<text x="52" y="341" fill="#aab4bf" font-size="13" font-weight="600">navcam feature v7_1</text>
+<text x="52" y="360" fill="#7f8b98" font-size="11.5">dark blocky rock 0.3 m · relief 0.19 m · 4.3 m, dead ahead</text>
+<rect x="40" y="420" width="470" height="64" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2" opacity="0.72"/>
+<text x="52" y="441" fill="#aab4bf" font-size="13" font-weight="600">criteria (from CLAUDE)</text>
+<text x="52" y="460" fill="#7f8b98" font-size="11.5">“prioritise targets whose tone/texture differs from Máaz…”</text>
+<rect x="40" y="520" width="470" height="54" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2" opacity="0.72"/>
+<text x="52" y="541" fill="#aab4bf" font-size="13" font-weight="600">candidates in view</text>
+<text x="52" y="560" fill="#7f8b98" font-size="11.5">Máaz + Navcam read · rock in view 1 · rock in view 2</text>
+<rect x="40" y="600" width="470" height="54" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2" opacity="0.72"/>
+<text x="52" y="621" fill="#aab4bf" font-size="13" font-weight="600">arm workspace</text>
+<text x="52" y="640" fill="#7f8b98" font-size="11.5">gentle tilt · firm pavement · clear air</text>
+<rect x="40" y="700" width="470" height="64" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2" opacity="0.72"/>
+<text x="52" y="721" fill="#aab4bf" font-size="13" font-weight="600">telemetry event</text>
+<text x="52" y="740" fill="#7f8b98" font-size="11.5">46 % wheel slip over 2 m · VO converged · currents nominal</text>
+<rect x="40" y="800" width="470" height="64" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2" opacity="0.72"/>
+<text x="52" y="821" fill="#aab4bf" font-size="13" font-weight="600">objective (USER)</text>
+<text x="52" y="840" fill="#7f8b98" font-size="11.5">“Is this light-toned float a Séítah rock? LIBS + WATSON…”</text>
+<rect x="40" y="900" width="470" height="64" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2" opacity="0.72"/>
+<text x="52" y="921" fill="#aab4bf" font-size="13" font-weight="600">planned activity a0..a2</text>
+<text x="52" y="940" fill="#7f8b98" font-size="11.5">Mastcam-Z → LIBS → WATSON · comes_after · uses_the_arm</text>
+<rect x="590" y="150" width="250" height="54" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="602" y="171" fill="#c9d1d9" font-size="13" font-weight="600">feature_type · choice</text>
+<text x="602" y="190" fill="#4fd18b" font-size="11.5">sand_ripples 1.00 · conf 1.00</text>
+<rect x="590" y="220" width="250" height="54" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="602" y="241" fill="#c9d1d9" font-size="13" font-weight="600">wheel_hazard · noul</text>
+<text x="602" y="260" fill="#4fd18b" font-size="11.5">0.05</text>
+<rect x="590" y="290" width="250" height="54" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="602" y="311" fill="#c9d1d9" font-size="13" font-weight="600">sinkage_risk · noul</text>
+<text x="602" y="330" fill="#4fd18b" font-size="11.5">0.74</text>
+<rect x="590" y="360" width="250" height="54" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="602" y="381" fill="#c9d1d9" font-size="13" font-weight="600">science_interest · noul</text>
+<text x="602" y="400" fill="#4fd18b" font-size="11.5">0.47</text>
+<rect x="590" y="450" width="250" height="54" rx="8" fill="#0f1317" stroke="#d9a441" stroke-width="1.2" opacity="0.72"/>
+<text x="602" y="471" fill="#c9d1d9" font-size="13" font-weight="600">criteria match · score 0–3</text>
+<text x="602" y="490" fill="#7f8b98" font-size="11.5">Máaz 2.97 · conf 0.97</text>
+<rect x="590" y="520" width="250" height="54" rx="8" fill="#0f1317" stroke="#d9a441" stroke-width="1.2" opacity="0.72"/>
+<text x="602" y="541" fill="#c9d1d9" font-size="13" font-weight="600">instrument · choice</text>
+<text x="602" y="560" fill="#7f8b98" font-size="11.5">WATSON_closeup 78 % · LIBS 17 %</text>
+<rect x="590" y="590" width="250" height="54" rx="8" fill="#0f1317" stroke="#d9a441" stroke-width="1.2" opacity="0.72"/>
+<text x="602" y="611" fill="#c9d1d9" font-size="13" font-weight="600">arm_deploy_safe · noul</text>
+<text x="602" y="630" fill="#7f8b98" font-size="11.5">0.96</text>
+<rect x="590" y="680" width="250" height="54" rx="8" fill="#0f1317" stroke="#d9a441" stroke-width="1.2" opacity="0.72"/>
+<text x="602" y="701" fill="#c9d1d9" font-size="13" font-weight="600">fault_class · choice</text>
+<text x="602" y="720" fill="#7f8b98" font-size="11.5">wheel_slip_excess · conf 0.81</text>
+<rect x="590" y="750" width="250" height="54" rx="8" fill="#0f1317" stroke="#d9a441" stroke-width="1.2" opacity="0.72"/>
+<text x="602" y="771" fill="#c9d1d9" font-size="13" font-weight="600">stop_drive · noul</text>
+<text x="602" y="790" fill="#7f8b98" font-size="11.5">0.71</text>
+<rect x="590" y="820" width="250" height="54" rx="8" fill="#0f1317" stroke="#d9a441" stroke-width="1.2" opacity="0.72"/>
+<text x="602" y="841" fill="#c9d1d9" font-size="13" font-weight="600">needs_ground · noul</text>
+<text x="602" y="860" fill="#7f8b98" font-size="11.5">0.58</text>
+<rect x="590" y="900" width="250" height="54" rx="8" fill="#0f1317" stroke="#d9a441" stroke-width="1.2" opacity="0.72"/>
+<text x="602" y="921" fill="#c9d1d9" font-size="13" font-weight="600">serves_objective · noul ×3</text>
+<text x="602" y="940" fill="#7f8b98" font-size="11.5">0.96 · 0.75 · 0.71</text>
+<rect x="590" y="970" width="250" height="54" rx="8" fill="#0f1317" stroke="#d9a441" stroke-width="1.2" opacity="0.72"/>
+<text x="602" y="991" fill="#c9d1d9" font-size="13" font-weight="600">prerequisites_met · noul ×3</text>
+<text x="602" y="1010" fill="#7f8b98" font-size="11.5">0.90 · 0.88 · 0.84</text>
+<rect x="590" y="1040" width="250" height="54" rx="8" fill="#0f1317" stroke="#d9a441" stroke-width="1.2" opacity="0.72"/>
+<text x="602" y="1061" fill="#c9d1d9" font-size="13" font-weight="600">risk_acceptable · noul ×3</text>
+<text x="602" y="1080" fill="#7f8b98" font-size="11.5">0.92 · 0.90 · 0.65</text>
+<rect x="1100" y="150" width="300" height="54" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1112" y="171" fill="#c9d1d9" font-size="13" font-weight="600">conf &lt; 0.55 ?</text>
+<text x="1112" y="190" fill="#4fd18b" font-size="11.5">no → act on the read</text>
+<rect x="1100" y="220" width="300" height="54" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1112" y="241" fill="#c9d1d9" font-size="13" font-weight="600">type == shadow_only ?</text>
+<text x="1112" y="260" fill="#4fd18b" font-size="11.5">no</text>
+<rect x="1100" y="290" width="300" height="54" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1112" y="311" fill="#c9d1d9" font-size="13" font-weight="600">sinkage &gt; 0.50 ?</text>
+<text x="1112" y="330" fill="#4fd18b" font-size="11.5">yes → keep-out r = 6 m</text>
+<rect x="1100" y="360" width="300" height="54" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2" opacity="0.72"/>
+<text x="1112" y="381" fill="#c9d1d9" font-size="13" font-weight="600">wheel_hazard &gt; 0.50 || relief ≥ 0.20 ?</text>
+<text x="1112" y="400" fill="#7f8b98" font-size="11.5">→ perception map</text>
+<rect x="1100" y="430" width="300" height="54" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2" opacity="0.72"/>
+<text x="1112" y="451" fill="#c9d1d9" font-size="13" font-weight="600">type == dust_devil &amp;&amp; science &gt; 0.60 ?</text>
+<text x="1112" y="470" fill="#7f8b98" font-size="11.5">→ MEDA movie</text>
+<rect x="1100" y="500" width="300" height="64" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1112" y="521" fill="#c9d1d9" font-size="13" font-weight="600">ENav: 9 arcs · tracks + belly · tilt ≤ 20°</text>
+<text x="1112" y="540" fill="#4fd18b" font-size="11.5">8 of 9 blocked (keep-out) → κ = +0.15</text>
+<rect x="1100" y="590" width="300" height="54" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2" opacity="0.72"/>
+<text x="1112" y="611" fill="#c9d1d9" font-size="13" font-weight="600">best match ≥ 1.5 &amp;&amp; arm ≥ 0.60 ?</text>
+<text x="1112" y="630" fill="#7f8b98" font-size="11.5">yes → run planned + suggested</text>
+<rect x="1100" y="660" width="300" height="54" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2" opacity="0.72"/>
+<text x="1112" y="681" fill="#c9d1d9" font-size="13" font-weight="600">remote before contact; margin 15 %</text>
+<text x="1112" y="700" fill="#7f8b98" font-size="11.5">scheduler</text>
+<rect x="1100" y="740" width="300" height="54" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2" opacity="0.72"/>
+<text x="1112" y="761" fill="#c9d1d9" font-size="13" font-weight="600">stop_drive &gt; 0.50 → halt now</text>
+<text x="1112" y="780" fill="#7f8b98" font-size="11.5">no Earth round trip</text>
+<rect x="1100" y="810" width="300" height="54" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2" opacity="0.72"/>
+<text x="1112" y="831" fill="#c9d1d9" font-size="13" font-weight="600">needs_ground &gt; 0.50 || conf &lt; 0.55 ?</text>
+<text x="1112" y="850" fill="#7f8b98" font-size="11.5">yes → escalate</text>
+<rect x="1100" y="930" width="300" height="64" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2" opacity="0.72"/>
+<text x="1112" y="951" fill="#c9d1d9" font-size="13" font-weight="600">all three ≥ 0.50 ?</text>
+<text x="1112" y="970" fill="#7f8b98" font-size="11.5">a0 ✓ a1 ✓ a2 ✓ → commit</text>
+<rect x="1630" y="150" width="330" height="54" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1642" y="171" fill="#c9d1d9" font-size="13" font-weight="600">steer arc κ = +0.15</text>
+<text x="1642" y="190" fill="#4fd18b" font-size="11.5">route bends left · flag: jev keep-out</text>
+<rect x="1630" y="290" width="330" height="54" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1642" y="311" fill="#c9d1d9" font-size="13" font-weight="600">add keep-out (6 m)</text>
+<text x="1642" y="330" fill="#4fd18b" font-size="11.5">swimlane unchanged</text>
+<rect x="1630" y="220" width="330" height="54" rx="8" fill="#0f1317" stroke="#4fd18b" stroke-width="1.2" opacity="0.72"/>
+<text x="1642" y="241" fill="#c9d1d9" font-size="13" font-weight="600">stop · raise mast · re-image · ask again</text>
+<text x="1642" y="260" fill="#7f8b98" font-size="11.5">confidence gate</text>
+<rect x="1630" y="430" width="330" height="54" rx="8" fill="#0f1317" stroke="#4fd18b" stroke-width="1.2" opacity="0.72"/>
+<text x="1642" y="451" fill="#c9d1d9" font-size="13" font-weight="600">schedule MEDA + Navcam movie</text>
+<text x="1642" y="470" fill="#7f8b98" font-size="11.5">8 Wh · 15 min · 30 Mb</text>
+<rect x="1630" y="560" width="330" height="64" rx="8" fill="#0f1317" stroke="#4fd18b" stroke-width="1.2" opacity="0.72"/>
+<text x="1642" y="581" fill="#c9d1d9" font-size="13" font-weight="600">run instruments → CLAUDE interpret</text>
+<text x="1642" y="600" fill="#7f8b98" font-size="11.5">Mastcam-Z → LIBS → WATSON → PIXL</text>
+<rect x="1630" y="740" width="330" height="54" rx="8" fill="#0f1317" stroke="#4fd18b" stroke-width="1.2" opacity="0.72"/>
+<text x="1642" y="761" fill="#c9d1d9" font-size="13" font-weight="600">halt drive</text>
+<text x="1642" y="780" fill="#7f8b98" font-size="11.5">onboard, immediate</text>
+<rect x="1630" y="810" width="330" height="64" rx="8" fill="#0f1317" stroke="#4fd18b" stroke-width="1.2" opacity="0.72"/>
+<text x="1642" y="831" fill="#c9d1d9" font-size="13" font-weight="600">wait for ground → CLAUDE anomaly</text>
+<text x="1642" y="850" fill="#7f8b98" font-size="11.5">resume with visodom / back up / stop</text>
+<rect x="1630" y="930" width="330" height="64" rx="8" fill="#0f1317" stroke="#4fd18b" stroke-width="1.2" opacity="0.72"/>
+<text x="1642" y="951" fill="#c9d1d9" font-size="13" font-weight="600">commit to timeline · drive · execute</text>
+<text x="1642" y="970" fill="#7f8b98" font-size="11.5">then CLAUDE report</text>
+<rect x="1630" y="1030" width="330" height="54" rx="8" fill="#0f1317" stroke="#4fd18b" stroke-width="1.2" opacity="0.72"/>
+<text x="1642" y="1051" fill="#c9d1d9" font-size="13" font-weight="600">drop activity, report why</text>
+<text x="1642" y="1070" fill="#7f8b98" font-size="11.5">jev: does not serve / prerequisite / risk</text>
+<rect x="40" y="1108" width="14" height="14" rx="3" fill="#0f1317" stroke="#3a4450" stroke-width="1.5"/><text x="62" y="1120" fill="#aab4bf" font-size="12">state (filtered, words)</text>
+<rect x="300" y="1108" width="14" height="14" rx="3" fill="#0f1317" stroke="#d9a441" stroke-width="1.5"/><text x="322" y="1120" fill="#aab4bf" font-size="12">jev question · typed answer</text>
+<rect x="560" y="1108" width="14" height="14" rx="3" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.5"/><text x="582" y="1120" fill="#aab4bf" font-size="12">code gate / geometry</text>
+<rect x="820" y="1108" width="14" height="14" rx="3" fill="#0f1317" stroke="#4fd18b" stroke-width="1.5"/><text x="842" y="1120" fill="#aab4bf" font-size="12">action</text>
+<rect x="1080" y="1108" width="14" height="14" rx="3" fill="#0f1317" stroke="#b48cff" stroke-width="1.5"/><text x="1102" y="1120" fill="#aab4bf" font-size="12">Claude (slow loop, dashed)</text>
+<rect x="1340" y="1108" width="14" height="14" rx="3" fill="#12181f" stroke="#4fd18b" stroke-width="2"/><text x="1362" y="1120" fill="#aab4bf" font-size="12">taken this cycle</text>
+</svg>

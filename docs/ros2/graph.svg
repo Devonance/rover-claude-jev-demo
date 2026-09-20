@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1780" height="1000" viewBox="0 0 1780 1000" font-family="ui-monospace, Consolas, monospace">
+<rect width="1780" height="1000" fill="#0b0e12"/>
+<text x="40" y="52" font-size="26" font-weight="700" fill="#e8edf2">JEZERO OPS · ROS 2 JAZZY GRAPH</text>
+<text x="40" y="80" font-size="13" fill="#aab4bf">browser = simulator (sensors, motion, rendering) · nodes = the decisions · every edge is a typed jezero_msgs interface · services for judgments, topics for sensors and state</text>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b7783"/></marker></defs>
+<rect x="60" y="380" width="300" height="74" rx="8" fill="#12161c" stroke="#e6b45a" stroke-width="2"/>
+<text x="74" y="410" font-size="16" font-weight="700" fill="#e8edf2">browser simulator</text>
+<text x="74" y="434" font-size="11.5" fill="#e6b45a">three.js · terrain, rover motion, 9-camera rig, HUD (roslibjs)</text>
+<rect x="400" y="380" width="300" height="74" rx="8" fill="#12161c" stroke="#9aa5b1" stroke-width="2"/>
+<text x="414" y="410" font-size="16" font-weight="700" fill="#e8edf2">/rosbridge_websocket</text>
+<text x="414" y="434" font-size="11.5" fill="#9aa5b1">ws://localhost:9090 · JSON ⇄ DDS</text>
+<rect x="760" y="120" width="300" height="74" rx="8" fill="#12161c" stroke="#5aa7e6" stroke-width="2"/>
+<text x="774" y="150" font-size="16" font-weight="700" fill="#e8edf2">/perception</text>
+<text x="774" y="174" font-size="11.5" fill="#5aa7e6">cloud → relief → blobs → words</text>
+<rect x="760" y="640" width="300" height="74" rx="8" fill="#12161c" stroke="#5aa7e6" stroke-width="2"/>
+<text x="774" y="670" font-size="16" font-weight="700" fill="#e8edf2">/enav</text>
+<text x="774" y="694" font-size="11.5" fill="#5aa7e6">9 arcs × 6 m · tracks + belly · tilt · cost map</text>
+<rect x="1130" y="380" width="300" height="74" rx="8" fill="#12161c" stroke="#5aa7e6" stroke-width="2"/>
+<text x="1144" y="410" font-size="16" font-weight="700" fill="#e8edf2">/sol_executive</text>
+<text x="1144" y="434" font-size="11.5" fill="#5aa7e6">py_trees executive · safety branch · gates · ledger</text>
+<rect x="1440" y="200" width="300" height="74" rx="8" fill="#12161c" stroke="#4fd18b" stroke-width="2"/>
+<text x="1454" y="230" font-size="16" font-weight="700" fill="#e8edf2">/jev_judge</text>
+<text x="1454" y="254" font-size="11.5" fill="#4fd18b">TypeSafe jev · questions → probabilities</text>
+<rect x="1440" y="560" width="300" height="74" rx="8" fill="#12161c" stroke="#b48cff" stroke-width="2"/>
+<text x="1454" y="590" font-size="16" font-weight="700" fill="#e8edf2">/claude_planner</text>
+<text x="1454" y="614" font-size="11.5" fill="#b48cff">ACTION servers · claude CLI + jev MCP tool</text>
+<rect x="60" y="760" width="300" height="74" rx="8" fill="#12161c" stroke="#4fd18b" stroke-width="2"/>
+<text x="74" y="790" font-size="16" font-weight="700" fill="#e8edf2">/health_monitor</text>
+<text x="74" y="814" font-size="11.5" fill="#4fd18b">jev on the telemetry stream · continuous</text>
+<path d="M360 417.0 C 380.0 417.0, 380.0 417.0, 400 417.0" fill="none" stroke="#9aa5b1" stroke-width="1.8" opacity="0.9" marker-end="url(#a)"/>
+<path d="M700.0 417.0 C 730.0 417.0, 730.0 157.0, 760.0 157.0" fill="none" stroke="#e6b45a" stroke-width="1.8" opacity="0.9" marker-end="url(#a)"/>
+<rect x="575.5" y="268.0" width="309.0" height="38" rx="4" fill="#0b0e12" stroke="#2a323c"/>
+<text x="581.5" y="283.0" font-size="11" fill="#aab4bf">/navcam/points  PointCloud2 (per camera pair)</text>
+<text x="581.5" y="298.0" font-size="11" fill="#aab4bf">/sim/heightmap  HeightMap</text>
+<path d="M700 406.0 C 915.0 406.0, 915.0 406.0, 1130 406.0" fill="none" stroke="#e6b45a" stroke-width="1.8" opacity="0.9" marker-end="url(#a)"/>
+<rect x="747.3" y="357.0" width="335.4" height="38" rx="4" fill="#0b0e12" stroke="#2a323c"/>
+<text x="753.3" y="372.0" font-size="11" fill="#aab4bf">/rover/state 10 Hz · /rover/cmd_done · /sim/ready</text>
+<text x="753.3" y="387.0" font-size="11" fill="#aab4bf">/ops/user_objective · /navcam/image/compressed</text>
+<path d="M1130 428.0 C 915.0 428.0, 915.0 428.0, 700 428.0" fill="none" stroke="#5aa7e6" stroke-width="1.8" opacity="0.9" marker-end="url(#a)"/>
+<rect x="681.3" y="419.0" width="467.4" height="38" rx="4" fill="#0b0e12" stroke="#2a323c"/>
+<text x="687.3" y="434.0" font-size="11" fill="#aab4bf">/rover/cmd · /navcam/trigger (group, boost) · /sim/view</text>
+<text x="687.3" y="449.0" font-size="11" fill="#aab4bf">/ops/hud · /ops/timeline · /ops/decisions · /ops/tree · /ops/downlink</text>
+<path d="M1060.0 157.0 C 1095.0 157.0, 1095.0 417.0, 1130.0 417.0" fill="none" stroke="#5aa7e6" stroke-width="1.8" opacity="0.9" marker-end="url(#a)"/>
+<rect x="976.8" y="275.5" width="236.39999999999998" height="23" rx="4" fill="#0b0e12" stroke="#2a323c"/>
+<text x="982.8" y="290.5" font-size="11" fill="#aab4bf">/perception/features  FeatureArray</text>
+<path d="M1119.0 417.0 C 1084.0 417.0, 1084.0 677.0, 1049.0 677.0" fill="none" stroke="#5aa7e6" stroke-width="1.8" opacity="0.9" stroke-dasharray="7 5" marker-end="url(#a)"/>
+<rect x="873.4" y="515.5" width="421.2" height="23" rx="4" fill="#0b0e12" stroke="#2a323c"/>
+<text x="879.4" y="530.5" font-size="11" fill="#aab4bf">/enav/evaluate (srv): pose, goal, reverse → 9 arcs + lookahead</text>
+<path d="M1141.0 417.0 C 1106.0 417.0, 1106.0 677.0, 1071.0 677.0" fill="none" stroke="#5aa7e6" stroke-width="1.8" opacity="0.9" marker-end="url(#a)"/>
+<rect x="997.7" y="555.5" width="216.6" height="23" rx="4" fill="#0b0e12" stroke="#2a323c"/>
+<text x="1003.7" y="570.5" font-size="11" fill="#aab4bf">/perception/map · /nav/keepouts</text>
+<path d="M700.0 417.0 C 730.0 417.0, 730.0 677.0, 760.0 677.0" fill="none" stroke="#e6b45a" stroke-width="1.8" opacity="0.9" marker-end="url(#a)"/>
+<rect x="677.8" y="535.5" width="104.39999999999999" height="23" rx="4" fill="#0b0e12" stroke="#2a323c"/>
+<text x="683.8" y="550.5" font-size="11" fill="#aab4bf">/sim/heightmap</text>
+<path d="M1430.0 417.0 C 1435.0 417.0, 1435.0 237.0, 1440.0 237.0" fill="none" stroke="#4fd18b" stroke-width="1.8" opacity="0.9" stroke-dasharray="7 5" marker-end="url(#a)"/>
+<rect x="1132.0" y="308.0" width="606.0" height="38" rx="4" fill="#0b0e12" stroke="#2a323c"/>
+<text x="1138.0" y="323.0" font-size="11" fill="#aab4bf">/jev/classify (Navcam + Hazcam) · /jev/aegis · /jev/verify (objectives + sequence review)</text>
+<text x="1138.0" y="338.0" font-size="11" fill="#aab4bf">/jev/judge: frame usability · downlink priority · sample defensibility   (srv, 200-500 ms)</text>
+<path d="M1430.0 417.0 C 1435.0 417.0, 1435.0 597.0, 1440.0 597.0" fill="none" stroke="#b48cff" stroke-width="1.8" opacity="0.9" stroke-dasharray="7 5" marker-end="url(#a)"/>
+<rect x="1158.4" y="488.0" width="553.1999999999999" height="38" rx="4" fill="#0b0e12" stroke="#2a323c"/>
+<text x="1164.4" y="503.0" font-size="11" fill="#aab4bf">/claude/ask · /claude/describe  (ACTIONS: feedback = phase/turns/consults, cancel)</text>
+<text x="1164.4" y="518.0" font-size="11" fill="#aab4bf">plan | interpret | objective | report | anomaly · 15-105 s</text>
+<path d="M400.0 417.0 C 380.0 417.0, 380.0 797.0, 360.0 797.0" fill="none" stroke="#e6b45a" stroke-width="1.8" opacity="0.9" marker-end="url(#a)"/>
+<rect x="304.7" y="595.5" width="150.6" height="23" rx="4" fill="#0b0e12" stroke="#2a323c"/>
+<text x="310.7" y="610.5" font-size="11" fill="#aab4bf">/rover/telemetry 1 Hz</text>
+<path d="M360 797.0 C 745.0 797.0, 745.0 417.0, 1130 417.0" fill="none" stroke="#4fd18b" stroke-width="1.8" opacity="0.9" marker-end="url(#a)"/>
+<rect x="577.3" y="595.5" width="335.4" height="23" rx="4" fill="#0b0e12" stroke="#2a323c"/>
+<text x="583.3" y="610.5" font-size="11" fill="#aab4bf">/health/verdict (fault class, stop, needs ground)</text>
+<rect x="40" y="940" width="14" height="14" rx="3" fill="none" stroke="#e6b45a" stroke-width="2"/><text x="62" y="952" font-size="12" fill="#aab4bf">simulator (browser)</text>
+<rect x="340" y="940" width="14" height="14" rx="3" fill="none" stroke="#5aa7e6" stroke-width="2"/><text x="362" y="952" font-size="12" fill="#aab4bf">code nodes (rules, geometry, executive)</text>
+<rect x="640" y="940" width="14" height="14" rx="3" fill="none" stroke="#4fd18b" stroke-width="2"/><text x="662" y="952" font-size="12" fill="#aab4bf">System One — jev</text>
+<rect x="940" y="940" width="14" height="14" rx="3" fill="none" stroke="#b48cff" stroke-width="2"/><text x="962" y="952" font-size="12" fill="#aab4bf">System Two — Claude</text>
+<rect x="1240" y="940" width="14" height="14" rx="3" fill="none" stroke="#9aa5b1" stroke-width="2"/><text x="1262" y="952" font-size="12" fill="#aab4bf">rosbridge</text>
+<text x="40" y="978" font-size="11" fill="#aab4bf">solid = topic · dashed = service/action · measured on the live graph: /rover/state 9-10 Hz, telemetry 1 Hz, jev 200-500 ms (onboard, continuous, and inside Claude), ENav &lt; 30 ms, Claude 15-105 s</text>
+</svg>

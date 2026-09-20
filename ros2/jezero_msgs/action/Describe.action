@@ -1,0 +1,14 @@
+sensor_msgs/CompressedImage frame
+string target_name
+int32 sol
+---
+bool ok
+string error
+string output_json
+string prompt
+string model
+float32 latency_ms
+float32 cost_usd
+---
+string phase
+float32 elapsed_s

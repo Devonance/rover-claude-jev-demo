@@ -1,0 +1,32 @@
+# Thresholds are policy, and policy is data the nodes read — never model output.
+enav:
+  ros__parameters:
+    tilt_limit_deg: 20.0
+    rock_step_limit_m: 0.20
+sol_executive:
+  ros__parameters:
+    conf_floor: 0.55        # feature_type confidence below this -> stop, re-image, ask again
+    energy_margin: 0.15
+    verify_floor: 0.5       # each objective activity needs serves/prerequisites/risk >= this
+    keepout_r: 6.0
+    sols: 3
+    downlink_reserve_mb: 40.0   # kept for engineering data; science products fill the rest by jev score
+    health_stop: 0.5
+    health_ground: 0.5
+jev_judge:
+  ros__parameters:
+    model: "jev-latest"
+claude_planner:
+  ros__parameters:
+    # Claude Code CLI as seen from inside WSL. Empty means use CLAUDE_BIN, or whatever
+    # `claude` resolves to on PATH. A Windows install is typically reached as
+    # "/mnt/c/Users/<you>/.local/bin/claude.exe".
+    claude_bin: ""
+    tmp_linux: "/tmp"
+    tmp_win: "C:\\Users\\Kevin\\AppData\\Local\\Temp"
+    timeout_s: 240.0
+health_monitor:
+  ros__parameters:
+    period_s: 1.0           # every telemetry sample gets a verdict: at ~180 tokens a question,
+                            # watching the whole housekeeping stream costs cents per run
+    model: "jev-latest"

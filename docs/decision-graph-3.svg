@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1310" viewBox="0 0 2000 1310" font-family="ui-monospace, Consolas, Menlo, monospace">
+<rect width="2000" height="1310" fill="#0b0d10"/>
+<text x="40" y="60" fill="#c9d1d9" font-size="22" font-weight="700">JEZERO OPS · DECISION GRAPH III — WHERE A FAST CALIBRATED JUDGE IS USED ON THE ROVER</text>
+<text x="40" y="86" fill="#7f8b98" font-size="13">fourteen uses of jev in the ROS 2 graph · every one is a closed question over words that code made from numbers · every answer is consumed by a rule that names its flight rule</text>
+<text x="40" y="126" fill="#7f8b98" font-size="11" letter-spacing="2">STREAM (what code turns into words)</text>
+<text x="520" y="126" fill="#d9a441" font-size="11" letter-spacing="2">JEV · TYPED QUESTIONS</text>
+<text x="1000" y="126" fill="#5aa7e6" font-size="11" letter-spacing="2">CADENCE</text>
+<text x="1500" y="126" fill="#4fd18b" font-size="11" letter-spacing="2">RULE THAT CONSUMES THE ANSWER</text>
+<rect x="40" y="150" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="172" fill="#c9d1d9" font-size="13" font-weight="600">1. Navcam pair (planning horizon)</text>
+<text x="52" y="190" fill="#7f8b98" font-size="11">features: appearance, size, position, stereo note</text>
+<rect x="520" y="150" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="174" fill="#d9a441" font-size="12">type (Choice ×6) · wheel hazard · sinkage · science (Noul)</text>
+<rect x="1000" y="150" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="174" fill="#5aa7e6" font-size="12">every 6 m · 1 request</text>
+<rect x="1500" y="150" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="172" fill="#4fd18b" font-size="11.5">perception map · 6 m keep-out · opportunistic science · conf &lt;</text>
+<text x="1512" y="186" fill="#9fd9b6" font-size="11.5">0.55 → re-image [FR-04/05/08]</text>
+<path d="M480,183 L520,183" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,183 L1000,183" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,183 L1500,183" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="224" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="246" fill="#c9d1d9" font-size="13" font-weight="600">2. ground ahead</text>
+<text x="52" y="264" fill="#7f8b98" font-size="11">corridor description: pavement, rocks, bright patches</text>
+<rect x="520" y="224" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="248" fill="#d9a441" font-size="12">class (Choice ×4: bedrock · cobble · regolith · sand)</text>
+<rect x="1000" y="224" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="248" fill="#5aa7e6" font-size="12">with the Navcam frame</text>
+<rect x="1500" y="224" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="246" fill="#4fd18b" font-size="11.5">predicted slip 5/12/20/45 % → energy &amp; time per metre [FR-14]</text>
+<path d="M480,257 L520,257" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,257 L1000,257" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,257 L1500,257" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="298" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="320" fill="#c9d1d9" font-size="13" font-weight="600">3. Navcam frame quality</text>
+<text x="52" y="338" fill="#7f8b98" font-size="11">features counted, shadowed fraction, sun, exposure</text>
+<rect x="520" y="298" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="322" fill="#d9a441" font-size="12">usable (Noul) · cause (Choice ×5)</text>
+<rect x="1000" y="298" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="322" fill="#5aa7e6" font-size="12">with the Navcam frame</text>
+<rect x="1500" y="298" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="320" fill="#4fd18b" font-size="11.5">P(usable) &lt; 0.5 → do not plan on it; mast pan, re-image</text>
+<text x="1512" y="334" fill="#9fd9b6" font-size="11.5">[FR-08]</text>
+<path d="M480,331 L520,331" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,331 L1000,331" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,331 L1500,331" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="372" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="394" fill="#c9d1d9" font-size="13" font-weight="600">4. front Hazcam pairs (near field)</text>
+<text x="52" y="412" fill="#7f8b98" font-size="11">features 0.3–4 m beyond the wheel line</text>
+<rect x="520" y="372" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="396" fill="#d9a441" font-size="12">same four, wheel-scale: about to roll onto it?</text>
+<rect x="1000" y="372" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="396" fill="#5aa7e6" font-size="12">before every 3 m segment + mid-arc</text>
+<rect x="1500" y="372" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="394" fill="#4fd18b" font-size="11.5">veto → perception map / 3 m keep-out; ENav re-plans before a</text>
+<text x="1512" y="408" fill="#9fd9b6" font-size="11.5">wheel moves [FR-06]</text>
+<path d="M480,405 L520,405" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,405 L1000,405" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,405 L1500,405" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="446" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="468" fill="#c9d1d9" font-size="13" font-weight="600">5. rear Hazcam pair</text>
+<text x="52" y="486" fill="#7f8b98" font-size="11">features behind the rover</text>
+<rect x="520" y="446" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="470" fill="#d9a441" font-size="12">same, mirrored</text>
+<rect x="1000" y="446" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="470" fill="#5aa7e6" font-size="12">before any reverse</text>
+<rect x="1500" y="446" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="468" fill="#4fd18b" font-size="11.5">reverse only on imaged, judged ground [FR-07]</text>
+<path d="M480,479 L520,479" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,479 L1000,479" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,479 L1500,479" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="520" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="542" fill="#c9d1d9" font-size="13" font-weight="600">6. rover health (telemetry 1 Hz)</text>
+<text x="52" y="560" fill="#7f8b98" font-size="11">SOC, battery temp, actuator currents, slip, VO, tilt,</text>
+<text x="52" y="574" fill="#7f8b98" font-size="11">suspension, dust — in words</text>
+<rect x="520" y="520" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="544" fill="#d9a441" font-size="12">fault class (Choice ×8) · stop drive · needs ground (Noul)</text>
+<rect x="1000" y="520" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="544" fill="#5aa7e6" font-size="12">on change, or every 10 s while driving</text>
+<rect x="1500" y="520" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="542" fill="#4fd18b" font-size="11.5">stop &gt; 0.5 → halt now; ground &gt; 0.5 → Claude anomaly action;</text>
+<text x="1512" y="556" fill="#9fd9b6" font-size="11.5">class change → cancel &amp; re-issue [FR-11]</text>
+<path d="M480,553 L520,553" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,553 L1000,553" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,553 L1500,553" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="594" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="616" fill="#c9d1d9" font-size="13" font-weight="600">7. sequence review before uplink</text>
+<text x="52" y="634" fill="#7f8b98" font-size="11">every planned activity: instrument, measures, purpose, order,</text>
+<text x="52" y="648" fill="#7f8b98" font-size="11">arm</text>
+<rect x="520" y="594" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="618" fill="#d9a441" font-size="12">serves · prerequisites · risk (Noul each)</text>
+<rect x="1000" y="594" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="618" fill="#5aa7e6" font-size="12">once per sol, 1 request</text>
+<rect x="1500" y="594" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="616" fill="#4fd18b" font-size="11.5">drop what fails, report to the planners; the rest is uplinked</text>
+<text x="1512" y="630" fill="#9fd9b6" font-size="11.5">[FR-10]</text>
+<path d="M480,627 L520,627" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,627 L1000,627" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,627 L1500,627" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="668" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="690" fill="#c9d1d9" font-size="13" font-weight="600">8. science stop (AEGIS-style)</text>
+<text x="52" y="708" fill="#7f8b98" font-size="11">candidates in view + Claude&#x27;s Navcam read + the criteria</text>
+<rect x="520" y="668" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="692" fill="#d9a441" font-size="12">match (Score 0–3) · instrument (Choice ×5) · arm safe (Noul)</text>
+<rect x="1000" y="668" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="692" fill="#5aa7e6" font-size="12">each stop, 1 request</text>
+<rect x="1500" y="668" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="690" fill="#4fd18b" font-size="11.5">selection rule; arm rule: 0.6 floor [FR-09]</text>
+<path d="M480,701 L520,701" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,701 L1000,701" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,701 L1500,701" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="742" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="764" fill="#c9d1d9" font-size="13" font-weight="600">9. arm placement (each contact-science activity)</text>
+<text x="52" y="782" fill="#7f8b98" font-size="11">candidate spots code derives from the rock geometry: attitude,</text>
+<text x="52" y="796" fill="#7f8b98" font-size="11">reach, light, dust, roughness, height</text>
+<rect x="520" y="742" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="766" fill="#d9a441" font-size="12">placement quality (Score 0–3) · collision risk (Noul), per</text>
+<text x="532" y="781" fill="#c9b98a" font-size="12">spot</text>
+<rect x="1000" y="742" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="766" fill="#5aa7e6" font-size="12">each arm activity, 1 request</text>
+<rect x="1500" y="742" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="764" fill="#4fd18b" font-size="11.5">best spot with quality ≥ 1.25, collision &lt; 0.5, inside the</text>
+<text x="1512" y="778" fill="#9fd9b6" font-size="11.5">workspace, else no contact science; code moves the arm [FR-09]</text>
+<path d="M480,775 L520,775" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,775 L1000,775" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,775 L1500,775" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="816" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="838" fill="#c9d1d9" font-size="13" font-weight="600">10. pre-contact check (hover, 30 cm over the spot)</text>
+<text x="52" y="856" fill="#7f8b98" font-size="11">workspace in words: placement-solution error, surface tilt,</text>
+<text x="52" y="870" fill="#7f8b98" font-size="11">clearance, rendered-surface hit</text>
+<rect x="520" y="816" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="840" fill="#d9a441" font-size="12">safe to contact · good data (Noul) · next (Choice ×3)</text>
+<rect x="1000" y="816" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="840" fill="#5aa7e6" font-size="12">each placement, 1 request</text>
+<rect x="1500" y="816" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="838" fill="#4fd18b" font-size="11.5">safe ≥ 0.5 → lower to contact and measure; else the next spot</text>
+<text x="1512" y="852" fill="#9fd9b6" font-size="11.5">once, or stow [FR-09]</text>
+<path d="M480,849 L520,849" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,849 L1000,849" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,849 L1500,849" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="890" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="912" fill="#c9d1d9" font-size="13" font-weight="600">11. core decision</text>
+<text x="52" y="930" fill="#7f8b98" font-size="11">target, evidence in hand, campaign goal</text>
+<rect x="520" y="890" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="914" fill="#d9a441" font-size="12">defensible · coherent (Noul) · missing (Choice ×5)</text>
+<rect x="1000" y="890" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="914" fill="#5aa7e6" font-size="12">before any core</text>
+<rect x="1500" y="890" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="912" fill="#4fd18b" font-size="11.5">core withheld with the missing step named, else committed</text>
+<text x="1512" y="926" fill="#9fd9b6" font-size="11.5">[FR-10]</text>
+<path d="M480,923 L520,923" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,923 L1000,923" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,923 L1500,923" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="964" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="986" fill="#c9d1d9" font-size="13" font-weight="600">12. relay pass</text>
+<text x="52" y="1004" fill="#7f8b98" font-size="11">data products: instrument, target, content, size; the</text>
+<text x="52" y="1018" fill="#7f8b98" font-size="11">hypotheses</text>
+<rect x="520" y="964" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="988" fill="#d9a441" font-size="12">value if sent now (Score 0–3) per product</text>
+<rect x="1000" y="964" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="988" fill="#5aa7e6" font-size="12">each pass, 1 request</text>
+<rect x="1500" y="964" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="986" fill="#4fd18b" font-size="11.5">order by score, fill the pass minus a 40 Mb engineering</text>
+<text x="1512" y="1000" fill="#9fd9b6" font-size="11.5">reserve [FR-02]</text>
+<path d="M480,997 L520,997" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,997 L1000,997" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,997 L1500,997" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="1038" width="440" height="66" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2"/>
+<text x="52" y="1060" fill="#c9d1d9" font-size="13" font-weight="600">13. user objective</text>
+<text x="52" y="1078" fill="#7f8b98" font-size="11">requester&#x27;s text, the target, the draft activities</text>
+<rect x="520" y="1038" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="1062" fill="#d9a441" font-size="12">serves · prerequisites · risk (Noul each)</text>
+<rect x="1000" y="1038" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="1062" fill="#5aa7e6" font-size="12">each objective</text>
+<rect x="1500" y="1038" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="1060" fill="#4fd18b" font-size="11.5">commit survivors to the swimlane; drive; execute; Claude</text>
+<text x="1512" y="1074" fill="#9fd9b6" font-size="11.5">reports [FR-12]</text>
+<path d="M480,1071 L520,1071" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,1071 L1000,1071" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,1071 L1500,1071" stroke="#3a4450" stroke-width="1.2"/>
+<rect x="40" y="1112" width="440" height="66" rx="8" fill="#0f1317" stroke="#b48cff" stroke-width="1.2"/>
+<text x="52" y="1134" fill="#c9d1d9" font-size="13" font-weight="600">14. inside Claude&#x27;s reasoning</text>
+<text x="52" y="1152" fill="#7f8b98" font-size="11">whatever the planner assembles: draft criteria, candidate</text>
+<text x="52" y="1166" fill="#7f8b98" font-size="11">order, evidence</text>
+<rect x="520" y="1112" width="440" height="66" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="1.5"/>
+<text x="532" y="1136" fill="#d9a441" font-size="12">score · order check · tie-break · self-audit (as asked)</text>
+<rect x="1000" y="1112" width="460" height="66" rx="8" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.2"/>
+<text x="1012" y="1136" fill="#5aa7e6" font-size="12">~1 per Claude task, MCP tool</text>
+<rect x="1500" y="1112" width="460" height="66" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="1.5"/>
+<text x="1512" y="1134" fill="#4fd18b" font-size="11.5">evidence Claude weighs and cites; captured under its card;</text>
+<text x="1512" y="1148" fill="#9fd9b6" font-size="11.5">counted in the HUD</text>
+<path d="M480,1145 L520,1145" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M960,1145 L1000,1145" stroke="#3a4450" stroke-width="1.2"/>
+<path d="M1460,1145 L1500,1145" stroke="#3a4450" stroke-width="1.2"/>
+<text x="40" y="1258" fill="#aab4bf" font-size="12">Measured on the recorded run: see docs/ros2/stats-final.txt — onboard jev requests by use, Claude actions with feedback and one cancel/re-issue, zero node errors. Rows 1–13 are services (200–500 ms); row 14 is an MCP tool call inside a Claude action.</text>
+<text x="40" y="1280" fill="#aab4bf" font-size="12">What jev is never asked: what to do next. That is a rule, and every rule cites the flight rule it enforces.</text>
+</svg>

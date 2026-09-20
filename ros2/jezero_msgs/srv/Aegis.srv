@@ -1,0 +1,6 @@
+string candidates_json
+string criteria
+string arm_json
+---
+string answers_json
+float32 latency_ms

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jezero Ops — Perseverance in-situ sim (Claude + jev)</title>
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles2.css">
+<link rel="icon" href="data:,">
+<script type="importmap">
+{ "imports": { "three": "/node_modules/three/build/three.module.js", "three/addons/": "/node_modules/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="app">
+  <div id="viewport">
+    <canvas id="gl"></canvas>
+
+    <div id="hud-top">
+      <div class="hud-cell"><span class="k">SOL</span><b id="hud-sol">—</b></div>
+      <div class="hud-cell"><span class="k">LMST</span><b id="hud-lmst">—</b></div>
+      <div class="hud-cell wide">
+        <span class="k">ENERGY</span>
+        <div class="hbar"><i id="hud-energy-bar"></i></div><b id="hud-energy">—</b>
+      </div>
+      <div class="hud-cell wide">
+        <span class="k">DOWNLINK</span>
+        <div class="hbar alt"><i id="hud-data-bar"></i></div><b id="hud-data">—</b>
+      </div>
+      <div class="hud-cell"><span class="k">ODOMETER</span><b id="hud-odo">—</b></div>
+      <div class="hud-cell"><span class="k">TILT</span><b id="hud-tilt">—</b></div>
+      <div class="hud-cell"><span class="k">MODE</span><b id="hud-mode">—</b></div>
+    </div>
+
+    <div id="hud-buttons">
+      <button class="hb on" id="btn-swim">SOL PLAN</button>
+      <button class="hb pink" id="btn-obj">CLICK A ROCK → OBJECTIVE</button>
+    </div>
+
+    <div id="navcam-wrap">
+      <div class="nc-head"><span>NAVCAM</span><span class="nc-sub">render → depth &amp; colour → blobs → words → jev</span></div>
+      <canvas id="navcam" width="336" height="189"></canvas>
+      <div class="nc-foot" id="navcam-foot">no frame yet</div>
+    </div>
+    <div id="now" class="now code"><span class="now-engine">CODE</span><span class="now-text">booting</span></div>
+
+    <div id="viewlabel">CHASE CAM</div>
+
+    <div id="legend">
+      <div class="lg claude"><i></i><b>CLAUDE</b> System Two — the science team &amp; tactical planners. Reads everything, argues from geology, writes the sol plan, interprets data, assesses new objectives, handles anomalies, writes reports. Seconds per call.</div>
+      <div class="lg jev"><i></i><b>JEV</b> System One — the onboard judgment. Typed answers with probabilities: what is that feature, is it a hazard, which instrument, is this a fault, does this plan step serve the objective. ~200 ms per call.</div>
+      <div class="lg code"><i></i><b>CODE</b> Deterministic — ENav arc geometry, ACE tilt/clearance, resource accounting, the sol state machine, the thresholds. No model involved.</div>
+      <div class="lg user"><i></i><b>USER</b> You — click any rock and state a science objective. Paths: <span style="color:#e6b45a">travelled</span> · <span style="color:#4fe3e0">intended</span> · <span style="color:#5aa7e6">current arc</span>; flags mark why the route changed.</div>
+    </div>
+
+    <div id="objective">
+      <h3>NEW SCIENCE OBJECTIVE</h3>
+      <div class="pick" id="obj-pick"></div>
+      <textarea id="obj-text" placeholder="What do you want checked, and why does it matter? e.g. “Is this light-toned float a carbonate-bearing Séítah rock? If so, get LIBS and a WATSON close-up so we know whether the Séítah unit extends this far north.”"></textarea>
+      <div class="row">
+        <span class="hint">Claude plans it inside the remaining Wh / Mb / minutes → jev verifies each step → code schedules → Claude reports.</span>
+        <button class="ghost" id="obj-cancel">Cancel</button>
+        <button class="send" id="obj-send">Send to science team</button>
+      </div>
+    </div>
+    <div id="pick-hint">click any rock in the scene to target it</div>
+
+    <div id="swimlane-wrap"><div id="swimlane"></div></div>
+
+    <div id="captions"></div>
+  </div>
+
+  <aside id="ops">
+    <div class="ops-head">
+      <div>
+        <h1>Jezero Ops</h1>
+        <p>Perseverance in-situ sim · real USGS terrain · NASA/JPL rover model</p>
+      </div>
+      <div class="ops-controls">
+        <button id="btn-start">▶ Autoplay</button>
+        <button id="btn-step" class="ghost">Step</button>
+      </div>
+    </div>
+    <div id="stream"></div>
+  </aside>
+</div>
+<script type="module" src="/app.js"></script>
+</body>
+</html>

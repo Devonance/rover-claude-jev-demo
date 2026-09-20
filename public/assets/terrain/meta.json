@@ -1,0 +1,28 @@
+{
+  "grid": 1024,
+  "size_m": 1280.0,
+  "m_per_px": 1.25,
+  "height_min": -2579.5469080904127,
+  "height_max": -2532.211641510725,
+  "centre_lonlat": [
+    77.4335,
+    18.4385
+  ],
+  "bbox_lonlat": {
+    "west": 77.42270281289082,
+    "north": 18.449297187109195,
+    "east": 77.4442971871092,
+    "south": 18.427702812890807
+  },
+  "vertical_datum": "MOLA areoid (USGS DTM), metres",
+  "sources": {
+    "dtm": "USGS Astrogeology, Mars 2020 TRN CTX DTM Mosaic, 20 m/px, JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif (Fergason et al. 2020, doi:10.5066/P906QQT8)",
+    "ortho": "USGS Astrogeology, Mars 2020 TRN CTX Orthomosaic, 6 m/px, JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.tif",
+    "rover": "NASA/JPL-Caltech, Mars Perseverance Rover 3D model (25042_Perseverance.glb), science.nasa.gov"
+  },
+  "synthetic": {
+    "micro_relief": "fractal noise, amplitudes 0.45/0.18/0.06 m at ~40/10/2.5 m wavelengths",
+    "rocks": "Golombek CFA model k=0.07, D>=0.35 m, h/D~0.5, within +/-400 m",
+    "sand": "7 ripple fields, 2 m wavelength, 0.12 m amplitude"
+  }
+}

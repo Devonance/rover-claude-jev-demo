@@ -1,0 +1,44 @@
+# Jezero Ops v5 — recorded run (take 3, compact layout, 19 Sep 2026), from the ROS 2 launch log + the autorun console log
+# video: jezero-ops-ros2-v5-1080p.mp4 (1080 s, 1920x1080); 0 page errors, 0 node errors; three sols
+
+## Arm (new in v5)
+placements:     3 arm placements judged by jev (8 questions each: quality Score + collision Noul per candidate spot)
+                Máaz WATSON (sol 1): top 1.44/3, collision 0.13 -> chosen; near face 1.42 but collision 0.71; flanks ~1.0
+                picked rock WATSON (sol 2): top 1.25/3, collision 0.20 -> chosen
+                Rochette abrade (sol 3): top 2.99/3, collision 0.10 -> chosen (the run ends at the hover)
+contact checks: 3 pre-contact checks from the hover (3 questions each); the two that completed were cleared
+                (safe_to_contact 0.57 and 0.59, good_data ~0.17 on the tilted tops, next = shift with no other acceptable spot)
+                take 2 of this run had jev refuse a steeply tilted top outright (safe 0.26) and the arm stowed
+motion:         unstow -> hover 28 cm over the chosen spot along the surface normal -> contact -> retract -> stow,
+                CCD inverse kinematics on the model's five-joint chain; placement-solution error < 1 mm
+
+## Goal-3 counters (ros2/quickstats.sh)
+frame gate:     0 of 24 Navcam frames rejected by jev
+health:         52 jev verdicts on /rover/telemetry, 9 non-nominal; 2 health-triggered halts (wheel_slip_excess at 167 m, FR-11;
+                motor_current_high at ~230 m)
+escalation:     needs_ground > 0.50 -> Claude anomaly action; class changed to motor_current_high while it ran -> cancelled, re-issued, answered
+claude actions: 12 /claude/ask goals + 4 /claude/describe goals; 1 cancelled by the executive, 1 re-issued
+review:         4 pre-uplink sequence reviews (3 sols + 1 user objective), 3 downlink prioritisations
+
+## Perception / navigation (ros2/stats.sh)
+navcam frames:        34
+front hazcam frames:  179  (rear 12)
+jev navcam calls:     24
+jev hazcam calls:     35  (+1 rear)
+hazcam vetoes:        15
+jev aegis / verify:   3 / 4
+enav evaluations:     107 forward + 15 reverse
+
+## Claude (System Two) with jev inside
+claude calls:         16 (12 ask + 4 describe), $1.41 total
+calls consulting jev: 10 of 10 asks that were told to consult; 10 consultations, 44 questions asked from inside Claude's reasoning
+
+## Timeline (autorun console, seconds from page load)
+   4  sol 1 planning (Claude, jev consulted) -> sequence review (jev) -> drive to Máaz (104 s) -> Mastcam-Z, LIBS
+ 182  arm placement #1 on Máaz: jev scores four spots, code unstows, hover, jev clears contact, WATSON on the top facet
+ 203  sol 1 downlink prioritised by jev; sol 2 planning
+ 301  user clicks a rock and states an objective -> Claude assesses, jev verifies, drive; 481 arrived; placement #2, WATSON
+ 621  wheel_slip_excess halt (FR-11) -> ground escalation -> class change -> Claude action cancelled and re-issued -> answer (662)
+ 761  motor-current excursion at ~230 m -> second halt -> ground answer (782)
+ 844  arrived at Rochette; 902 sol 2 downlink; sol 3 planning; LIBS; 1063 placement #3 (abrade) on Rochette, top 2.99/3
+1080  run ends at the hover over Rochette

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "jev": {
+      "command": "node",
+      "args": ["C:\\Users\\Kevin\\Genai\\mars-rover-game\\tools\\mcp_jev_server.mjs"]
+    }
+  }
+}

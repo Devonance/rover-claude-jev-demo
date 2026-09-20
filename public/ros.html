@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jezero Ops — ROS 2 (Claude + jev + code as nodes)</title>
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles2.css">
+<link rel="icon" href="data:,">
+<script src="/node_modules/roslib/build/roslib.min.js"></script>
+<script type="importmap">
+{ "imports": { "three": "/node_modules/three/build/three.module.js", "three/addons/": "/node_modules/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="app">
+  <div id="viewport">
+    <canvas id="gl"></canvas>
+
+    <div id="hud-top">
+      <div class="hud-cell"><span class="k">SOL</span><b id="hud-sol">—</b></div>
+      <div class="hud-cell"><span class="k">LMST</span><b id="hud-lmst">—</b></div>
+      <div class="hud-cell wide">
+        <span class="k">ENERGY</span>
+        <div class="hbar"><i id="hud-energy-bar"></i></div><b id="hud-energy">—</b>
+      </div>
+      <div class="hud-cell wide">
+        <span class="k">DOWNLINK</span>
+        <div class="hbar alt"><i id="hud-data-bar"></i></div><b id="hud-data">—</b>
+      </div>
+      <div class="hud-cell"><span class="k">ODOMETER</span><b id="hud-odo">—</b></div>
+      <div class="hud-cell"><span class="k">TILT</span><b id="hud-tilt">—</b></div>
+      <div class="hud-cell"><span class="k">MODE</span><b id="hud-mode">—</b></div>
+      <div class="hud-cell"><span class="k">SLIP</span><b id="hud-slip">—</b></div>
+      <div class="hud-cell jevcell"><span class="k">JEV · IN CLAUDE</span><b id="hud-jev">—</b></div>
+    </div>
+    <canvas id="mind" width="560" height="68"></canvas>
+    <div id="health" class="panel health"></div>
+    <div id="tree" class="panel tree"></div>
+    <div id="downlink" class="panel downlink"></div>
+    <div id="costmap-legend">ENav cost map · <span style="color:#59cc80">■</span> low · <span style="color:#e6d95a">■</span> tilt · <span style="color:#f29a40">■</span> rock margin / sand · <span style="color:#eb5a4d">■</span> lethal</div>
+
+    <div id="hud-buttons">
+      <button class="hb on" id="btn-swim">SOL PLAN</button>
+      <button class="hb pink" id="btn-obj">CLICK A ROCK → OBJECTIVE</button>
+    </div>
+
+    <div id="navcam-wrap" class="rig">
+      <div class="nc-head"><span>ENGINEERING CAMERAS · 9</span><span class="nc-sub">Navcam pair → plan · front Hazcam pairs → veto · rear pair → reverse · each pair: depth → cloud → perception_node → jev</span></div>
+      <canvas id="camgrid" width="532" height="341"></canvas>
+      <canvas id="navcam" width="336" height="189" style="display:none"></canvas>
+      <div class="nc-foot" id="navcam-foot">no frame yet</div>
+      <div class="nc-foot" id="cam-status"></div>
+    </div>
+    <div id="now" class="now code"><span class="now-engine">CODE</span><span class="now-text">booting</span></div>
+
+    <div id="viewlabel">CHASE CAM</div>
+
+    <div id="legend">
+      <div class="lg claude"><i></i><b>CLAUDE</b> System Two — the science team &amp; tactical planners. Reads everything, argues from geology, writes the sol plan, interprets data, assesses new objectives, handles anomalies, writes reports. Seconds per call.</div>
+      <div class="lg jev"><i></i><b>JEV</b> System One — the onboard judgment. Typed answers with probabilities: what is that feature, is it a hazard, which instrument, is this a fault, does this plan step serve the objective. ~200 ms per call.</div>
+      <div class="lg code"><i></i><b>CODE</b> Deterministic — ENav arc geometry, ACE tilt/clearance, resource accounting, the sol state machine, the thresholds. No model involved.</div>
+      <div class="lg user"><i></i><b>USER</b> You — click any rock and state a science objective. Paths: <span style="color:#e6b45a">travelled</span> · <span style="color:#4fe3e0">intended</span> · <span style="color:#5aa7e6">current arc</span>; flags mark why the route changed.</div>
+    </div>
+
+    <div id="objective">
+      <h3>NEW SCIENCE OBJECTIVE</h3>
+      <div class="pick" id="obj-pick"></div>
+      <textarea id="obj-text" placeholder="What do you want checked, and why does it matter? e.g. “Is this light-toned float a carbonate-bearing Séítah rock? If so, get LIBS and a WATSON close-up so we know whether the Séítah unit extends this far north.”"></textarea>
+      <div class="row">
+        <span class="hint">Claude plans it inside the remaining Wh / Mb / minutes → jev verifies each step → code schedules → Claude reports.</span>
+        <button class="ghost" id="obj-cancel">Cancel</button>
+        <button class="send" id="obj-send">Send to science team</button>
+      </div>
+    </div>
+    <div id="pick-hint">click any rock in the scene to target it</div>
+
+    <div id="swimlane-wrap"><div id="swimlane"></div></div>
+
+    <div id="captions"></div>
+  </div>
+
+  <aside id="ops">
+    <div class="ops-head">
+      <div>
+        <h1>Jezero Ops</h1>
+        <p>Perseverance sim as a <b>ROS 2 Jazzy</b> graph · browser = simulator, decisions = nodes</p>
+        <div id="ros-status">rosbridge · connecting</div>
+        <div id="ros-graph"></div>
+      </div>
+      <div class="ops-controls">
+        <button id="btn-start">▶ Autoplay</button>
+        <button id="btn-step" class="ghost">Step</button>
+      </div>
+    </div>
+    <div id="stream"></div>
+  </aside>
+</div>
+<script type="module" src="/app_ros.js"></script>
+</body>
+</html>

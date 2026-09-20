@@ -1,0 +1,6 @@
+string id
+string feature_type
+float32 type_confidence
+float32 wheel_hazard
+float32 sinkage_risk
+float32 science_interest

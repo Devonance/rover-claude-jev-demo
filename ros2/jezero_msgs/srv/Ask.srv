@@ -1,0 +1,14 @@
+# System Two: one schema-constrained call to the LLM (plan | interpret | anomaly | objective | report).
+string kind
+string ctx_json
+---
+bool ok
+string error
+string output_json
+string prompt
+string model
+float32 latency_ms
+float32 cost_usd
+int32 tokens_out
+int32 turns
+string consults_json   # jev consultations Claude made while reasoning (MCP tool calls)

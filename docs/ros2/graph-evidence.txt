@@ -1,0 +1,96 @@
+# captured on the live graph, 2026-09-19T11:23Z
+
+$ ros2 node list
+WARNING: Be aware that there are nodes in the graph that share an exact name, which can have unintended side effects.
+/claude_planner
+/claude_planner
+/enav
+/health_monitor
+/jev_judge
+/perception
+/rosapi
+/rosbridge_websocket
+/rqt_gui_py_node_4263
+/sol_executive
+
+$ ros2 topic list
+/client_count
+/connected_clients
+/health/verdict
+/nav/costmap
+/nav/keepouts
+/navcam/image/compressed
+/navcam/points
+/navcam/trigger
+/ops/decisions
+/ops/downlink
+/ops/hud
+/ops/timeline
+/ops/tree
+/ops/user_objective
+/ops/world
+/parameter_events
+/perception/features
+/perception/map
+/rosout
+/rover/cmd
+/rover/cmd_done
+/rover/state
+/rover/telemetry
+/sim/heightmap
+/sim/ready
+/sim/view
+
+$ ros2 service list | grep -E "jev|enav|claude" (parameter services omitted)
+/enav/evaluate
+/jev/aegis
+/jev/classify
+/jev/fault
+/jev/judge
+/jev/verify
+
+$ ros2 interface list | grep jezero_msgs
+    jezero_msgs/msg/Arc
+    jezero_msgs/msg/ArcEval
+    jezero_msgs/msg/CaptureRequest
+    jezero_msgs/msg/CmdDone
+    jezero_msgs/msg/CostMap
+    jezero_msgs/msg/DataProduct
+    jezero_msgs/msg/Decision
+    jezero_msgs/msg/DownlinkQueue
+    jezero_msgs/msg/Feature
+    jezero_msgs/msg/FeatureArray
+    jezero_msgs/msg/HealthVerdict
+    jezero_msgs/msg/HeightMap
+    jezero_msgs/msg/Hud
+    jezero_msgs/msg/KeepOut
+    jezero_msgs/msg/KeepOutArray
+    jezero_msgs/msg/PerceptionMap
+    jezero_msgs/msg/Rock
+    jezero_msgs/msg/RockArray
+    jezero_msgs/msg/RoverCmd
+    jezero_msgs/msg/RoverState
+    jezero_msgs/msg/Telemetry
+    jezero_msgs/msg/Timeline
+    jezero_msgs/msg/TimelineBlock
+    jezero_msgs/msg/TreeState
+    jezero_msgs/msg/UserObjective
+    jezero_msgs/msg/Verdict
+    jezero_msgs/msg/VerdictArray
+    jezero_msgs/msg/ViewCmd
+    jezero_msgs/srv/Aegis
+    jezero_msgs/srv/Ask
+    jezero_msgs/srv/Classify
+    jezero_msgs/srv/DescribeFrame
+    jezero_msgs/srv/EvaluateArcs
+    jezero_msgs/srv/Fault
+    jezero_msgs/srv/Judge
+    jezero_msgs/srv/Verify
+    jezero_msgs/action/Ask
+    jezero_msgs/action/Describe
+
+$ ros2 topic hz /rover/state
+
+$ ros2 topic hz /navcam/points  (Navcam + Hazcam captures)
+
+$ ros2 topic echo --once /ops/decisions

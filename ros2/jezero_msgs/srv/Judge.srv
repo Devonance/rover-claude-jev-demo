@@ -1,0 +1,6 @@
+# generic typed judgment: kind = frame | downlink | sample | health; args_json per kind
+string kind
+string args_json
+---
+string answers_json
+float32 latency_ms

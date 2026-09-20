@@ -1,0 +1,153 @@
+/* ── swimlane ─────────────────────────────────────────────────────────── */
+#swimlane-wrap{position:absolute;left:12px;right:12px;bottom:58px;pointer-events:auto;transition:transform .3s,opacity .3s}
+#swimlane-wrap.hidden{transform:translateY(20px);opacity:0;pointer-events:none}
+#swimlane{background:rgba(8,10,13,.86);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:8px 10px 8px;font-family:var(--mono);font-size:10px;color:var(--ink2)}
+.sw-head{display:flex;align-items:center;gap:14px;margin-bottom:4px}
+.sw-head b{color:var(--ink);letter-spacing:.14em;font-size:10.5px}
+.sw-legend{display:flex;gap:10px;align-items:center;color:var(--ink3)}
+.sw-legend i{display:inline-block;width:10px;height:8px;border-radius:2px;margin:0 4px 0 6px;vertical-align:middle;border:1px solid var(--claude);background:transparent}
+.sw-legend i.running{background:var(--rover);border-color:var(--rover)} .sw-legend i.done{background:var(--code);border-color:var(--code)} .sw-legend i.dropped{background:repeating-linear-gradient(45deg,var(--hot) 0 2px,transparent 2px 4px);border-color:var(--hot)} .sw-legend i.objective{border-color:#ff8fb1;background:rgba(255,143,177,.25)}
+.sw-now{margin-left:auto;color:var(--ink)}
+.sw-axis{position:relative;height:12px;margin-left:190px;color:var(--ink3);font-size:9px}
+.sw-axis span{position:absolute;transform:translateX(-50%)}
+.sw-lanes{position:relative}
+.sw-nowline{position:absolute;top:0;bottom:0;width:1px;background:var(--rover);opacity:.9;z-index:2}
+.lane{display:grid;grid-template-columns:190px 1fr;align-items:center;height:20px;border-top:1px solid rgba(255,255,255,.05)}
+.lane-label{display:flex;flex-direction:column;line-height:1.1;padding-right:8px}
+.lane-label b{color:var(--ink);font-weight:600;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lane-label span{color:var(--ink3);font-size:8.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lane-track{position:relative;height:16px;background:rgba(255,255,255,.03);border-radius:3px}
+.blk{position:absolute;top:1px;bottom:1px;border-radius:3px;border:1px solid var(--claude);background:rgba(180,140,255,.12);color:var(--ink);overflow:hidden;white-space:nowrap;padding:0 4px;font-size:9px;line-height:13px;box-sizing:border-box}
+.blk.running{background:rgba(230,180,90,.35);border-color:var(--rover)}
+.blk.done{background:rgba(90,167,230,.35);border-color:var(--code)}
+.blk.dropped{background:repeating-linear-gradient(45deg,rgba(234,106,90,.35) 0 3px,transparent 3px 6px);border-color:var(--hot);color:#ffb3aa}
+.blk.objective{border-color:#ff8fb1;box-shadow:inset 0 0 0 1px rgba(255,143,177,.4)}
+.blk.opportunistic{border-style:dashed}
+.blk .vf{position:absolute;right:3px;top:0;font-style:normal;color:var(--jev);font-size:8.5px}
+.sw-budget{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;padding-top:6px;border-top:1px solid rgba(255,255,255,.06)}
+.bud{display:grid;grid-template-columns:64px 1fr auto;gap:8px;align-items:center}
+.bud span{color:var(--ink3);letter-spacing:.12em;font-size:9px}
+.bud b{color:var(--ink);font-weight:600;font-size:10px;white-space:nowrap}
+.bud small{grid-column:2;color:var(--ink3);font-size:8.5px}
+.bb{position:relative;height:7px;background:rgba(255,255,255,.08);border-radius:3px}
+.bb .used{position:absolute;left:0;top:0;height:100%;background:var(--rover);border-radius:3px;transition:width .5s}
+.bb.alt .used{background:var(--code)}
+.bb .plan{position:absolute;top:-3px;width:2px;height:13px;background:var(--claude)}
+.bb .margin{position:absolute;top:-3px;width:1px;height:13px;background:var(--hot);opacity:.7}
+
+/* ── objective panel ──────────────────────────────────────────────────── */
+#hud-buttons{position:absolute;right:12px;top:56px;display:flex;gap:6px;z-index:3}
+#legend{top:98px}
+.hb{background:rgba(8,10,13,.78);border:1px solid rgba(255,255,255,.12);color:var(--ink);font:600 11px/1 var(--mono);letter-spacing:.08em;padding:7px 10px;border-radius:6px;cursor:pointer}
+.hb.on{border-color:var(--rover);color:var(--rover)}
+.hb.pink{border-color:#ff8fb1;color:#ff8fb1}
+#objective{position:absolute;left:50%;top:60px;transform:translateX(-50%);width:560px;background:rgba(8,10,13,.92);backdrop-filter:blur(12px);border:1px solid #ff8fb1;border-radius:10px;padding:12px 14px;z-index:5;display:none;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+#objective.on{display:block}
+#objective h3{margin:0 0 4px;font:700 11px/1 var(--mono);letter-spacing:.16em;color:#ff8fb1}
+#objective .pick{font-size:12px;color:var(--ink2);margin-bottom:8px}
+#objective .pick b{color:var(--ink)}
+#objective textarea{width:100%;min-height:64px;background:var(--bg);color:var(--ink);border:1px solid var(--line2);border-radius:7px;padding:9px 10px;font:14px/1.45 ui-sans-serif,system-ui;resize:vertical}
+#objective textarea:focus{outline:none;border-color:#ff8fb1}
+#objective .row{display:flex;gap:8px;margin-top:8px;align-items:center}
+#objective .row .hint{font-size:11px;color:var(--ink3);flex:1}
+#objective button.send{background:#ff8fb1;color:#2b0a15}
+.ev.user{border-left-color:#ff8fb1} .ev.user .badge{background:#ff8fb1;color:#2b0a15}
+.cap.user{border-color:#ff8fb1}
+.now.user{border-color:#ff8fb1} .now.user .now-engine{background:#ff8fb1;color:#2b0a15}
+.lg.user i{background:#ff8fb1}
+.report .rep-head{display:flex;align-items:center;gap:8px}
+.rep-answer{font-family:var(--mono);font-size:10px;font-weight:800;letter-spacing:.12em;padding:3px 7px;border-radius:4px;background:var(--claude-dim);color:var(--claude)}
+.rep-answer.confirmed{background:var(--jev-dim);color:var(--jev)} .rep-answer.refuted{background:rgba(234,106,90,.14);color:var(--hot)}
+#pick-hint{position:absolute;left:50%;bottom:64px;transform:translateX(-50%);font:11px var(--mono);color:#ff8fb1;background:rgba(8,10,13,.8);padding:5px 10px;border-radius:6px;border:1px solid #ff8fb1;display:none}
+#pick-hint.on{display:block}
+
+/* legend rows: block layout so inline colour spans flow with the text */
+.lg{display:block;position:relative;padding-left:24px}
+.lg i{position:absolute;left:10px;top:11px;margin:0}
+.lg b{display:inline}
+
+/* ── Navcam picture-in-picture ────────────────────────────────────────── */
+#navcam-wrap{position:absolute;left:12px;top:56px;width:340px;background:rgba(8,10,13,.82);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:6px;z-index:3;pointer-events:none}
+#navcam-wrap.active{border-color:var(--jev)}
+.nc-head{display:flex;justify-content:space-between;align-items:baseline;font:600 10px/1 var(--mono);letter-spacing:.14em;color:var(--ink2);margin:0 2px 5px}
+.nc-head .nc-sub{font-weight:400;letter-spacing:0;font-size:9.5px;color:var(--ink3)}
+#navcam{display:block;width:100%;height:auto;border-radius:4px;background:#000;image-rendering:auto}
+.nc-foot{font:10px/1.4 var(--mono);color:var(--ink3);margin:5px 2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ROS 2 page */
+#ros-status { margin-top: 6px; font: 11px var(--mono); color: var(--hot); }
+#ros-status.ok { color: var(--jev); }
+#ros-graph { margin-top: 4px; font: 10.5px var(--mono); color: var(--ink3); }
+#ros-graph .nodes { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+#ros-graph .nodes span { border: 1px solid var(--line2); border-radius: 4px; padding: 1px 5px; color: var(--ink2); }
+
+/* 3x3 engineering-camera rig (ROS page) */
+#navcam-wrap.rig { width: 548px; }
+#navcam-wrap.rig #camgrid { display: block; width: 532px; height: 341px; border-radius: 6px; }
+#navcam-wrap.rig .nc-sub { max-width: 420px; white-space: normal; line-height: 1.25; }
+#cam-status { white-space: pre-wrap; max-height: 3.6em; overflow: hidden; }
+
+/* two-speeds-of-mind strip + goal-2 HUD cells */
+#mind { position: absolute; left: 576px; top: 60px; width: 560px; height: 68px; z-index: 5; pointer-events: none; }
+.hud-cell.jevcell b { color: var(--jev); }
+.fr { font: 10.5px var(--mono); color: var(--code); border-left: 2px solid var(--code); padding-left: 6px; margin-top: 3px; }
+.consult { margin-top: 6px; border: 1px dashed var(--jev); border-radius: 6px; padding: 5px 8px; background: rgba(79,209,139,.06); }
+.consult .ch { font: 600 10.5px var(--mono); color: var(--jev); }
+.consult .cq { font: 10.5px var(--mono); color: var(--ink2); margin-top: 2px; white-space: pre-wrap; }
+#costmap-legend { position: absolute; right: 14px; bottom: 300px; font: 10px var(--mono); color: var(--ink3); background: rgba(8,10,13,.7); padding: 4px 8px; border-radius: 6px; }
+
+/* goal-3 panels: health (jev continuous), behaviour tree, downlink queue */
+.panel { position: absolute; z-index: 6; background: rgba(8,10,13,.82); border: 1px solid var(--line2); border-radius: 8px; padding: 6px 9px; font: 10.5px var(--mono); color: var(--ink2); pointer-events: none; }
+#objective { z-index: 40; }
+.panel .ph { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 4px; color: var(--ink); }
+.panel .ph span { color: var(--ink3); font-size: 10px; }
+.panel.health { left: 14px; top: 500px; width: 532px; }
+.panel.health.ok { border-color: var(--jev); } .panel.health.warn { border-color: var(--gold, #e6b45a); } .panel.health.bad { border-color: var(--hot); box-shadow: 0 0 0 1px var(--hot); }
+.panel .hv { display: grid; grid-template-columns: 82px 1fr 44px; align-items: center; gap: 6px; margin: 2px 0; }
+.panel .hv .k { color: var(--ink3); } .panel .hv .bar { height: 5px; background: rgba(255,255,255,.08); border-radius: 3px; overflow: hidden; } .panel .hv .bar i { display: block; height: 100%; background: var(--jev); }
+.panel.health.bad .hv .bar i { background: var(--hot); }
+.panel .hw { color: var(--ink3); font-size: 10px; margin-top: 3px; line-height: 1.3; }
+.panel.tree { left: 576px; top: 132px; width: 560px; max-height: 250px; overflow: hidden; }
+.panel.tree pre { margin: 0; font: 10px var(--mono); color: var(--ink2); white-space: pre; line-height: 1.25; }
+.panel.tree.bad { border-color: var(--hot); }
+.panel.downlink { right: 14px; bottom: 300px; width: 420px; display: none; }
+.panel.downlink.on { display: block; }
+.panel .dl { display: grid; grid-template-columns: 18px 1fr 48px 62px; gap: 6px; align-items: baseline; padding: 2px 0; border-top: 1px solid rgba(255,255,255,.05); }
+.panel .dl .pr { color: var(--code); font-weight: 600; } .panel .dl .mb { color: var(--ink3); text-align: right; } .panel .dl .sc { color: var(--jev); text-align: right; }
+.panel .dl .why { grid-column: 2 / 5; color: var(--ink3); font-size: 10px; }
+.panel .dl.sent .nm { color: var(--ink); } .panel .dl.sent::after { content: ""; }
+
+/* ── compact layout: all the data, but the rover stays visible in the middle ─────────────────── */
+#navcam-wrap.rig { width: 372px; padding: 5px; }
+#navcam-wrap.rig #camgrid { width: 360px; height: 231px; }
+#navcam-wrap.rig .nc-head { margin-bottom: 3px; }
+#navcam-wrap.rig .nc-sub { max-width: 240px; font-size: 8.5px; line-height: 1.15; }
+#navcam-wrap.rig .nc-foot { font-size: 9px; white-space: normal; max-height: 2.7em; overflow: hidden; line-height: 1.3; }
+.panel.health { left: 12px; top: 356px; width: 372px; font-size: 9.5px; padding: 5px 8px; }
+.panel.health .hw { font-size: 9px; max-height: 3.9em; overflow: hidden; }
+.panel .hv { grid-template-columns: 72px 1fr 40px; margin: 1px 0; }
+#hud-buttons { top: 56px; right: 324px; }
+#legend { top: 56px; width: 300px; gap: 4px; }
+#legend .lg { font-size: 9.5px; line-height: 1.25; padding: 4px 8px 4px 22px; }
+#legend .lg i { top: 8px; }
+.panel.tree { left: auto; right: 12px; top: 292px; width: 300px; max-height: 196px; padding: 5px 8px; }
+.panel.tree pre { font-size: 9px; line-height: 1.2; }
+#mind { left: 396px; width: 520px; height: 63px; }
+.panel.downlink { right: 12px; bottom: 236px; width: 340px; font-size: 9.5px; }
+.panel .dl { grid-template-columns: 16px 1fr 44px 58px; padding: 1px 0; }
+#costmap-legend { bottom: 236px; right: 360px; }
+#swimlane { padding: 5px 10px 6px; }
+.lane { height: 16px; } .lane-track { height: 13px; } .blk { font-size: 8.5px; line-height: 10px; }
+.lane-label b { font-size: 9.5px; } .lane-label span { font-size: 8px; }
+.sw-budget { margin-top: 4px; padding-top: 4px; }
+.sw-axis { height: 11px; }
+/* compact layout, second pass: no collisions between strip / buttons, rig / health, downlink / swimlane; one-line lane labels */
+#mind { width: 440px; }
+.panel.health { top: 378px; }
+.panel.downlink { bottom: 250px; }
+#costmap-legend { bottom: 250px; }
+.lane { grid-template-columns: 215px 1fr; }
+.lane-label { flex-direction: row; align-items: baseline; gap: 6px; overflow: hidden; }
+.lane-label span { flex: 1 1 auto; }
+.sw-axis { margin-left: 215px; }
+#costmap-legend { bottom: 258px; }

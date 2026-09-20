@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1180" viewBox="0 0 2000 1180" font-family="ui-monospace, Consolas, Menlo, monospace">
+<rect width="2000" height="1180" fill="#0b0d10"/>
+<text x="40" y="60" fill="#c9d1d9" font-size="22" font-weight="700">JEZERO OPS · DECISION GRAPH II — SYSTEM ONE INSIDE SYSTEM TWO</text>
+<text x="40" y="86" fill="#7f8b98" font-size="13">what Claude asks jev while it reasons (as an MCP tool), jev's real answers from the ROS 2 run, and what Claude did with them · then the onboard side takes over with the criteria Claude wrote</text>
+<text x="40" y="126" fill="#b48cff" font-size="11" letter-spacing="2">CLAUDE · SYSTEM TWO (15–95 s per task)</text>
+<text x="520" y="126" fill="#d9a441" font-size="11" letter-spacing="2">JEV · CONSULTED MID-REASONING (≈300 ms)</text>
+<text x="1040" y="126" fill="#4fd18b" font-size="11" letter-spacing="2">WHAT CLAUDE DID WITH THE ANSWER</text>
+<text x="1560" y="126" fill="#5aa7e6" font-size="11" letter-spacing="2">ONBOARD (the other graph)</text>
+<path d="M480,842.0 C500.0,842.0 500.0,842.0 520,842.0" fill="none" stroke="#3a4450" stroke-width="1.2" stroke-dasharray="6 5" opacity="0.55"/>
+<path d="M1000,842.0 C1020.0,842.0 1020.0,842.0 1040,842.0" fill="none" stroke="#3a4450" stroke-width="1.2" opacity="0.55"/>
+<path d="M480,192.0 C500.0,192.0 500.0,172.0 520,172.0" fill="none" stroke="#4fd18b" stroke-width="2.4" stroke-dasharray="6 5" opacity="1"/>
+<path d="M480,192.0 C500.0,192.0 500.0,252.0 520,252.0" fill="none" stroke="#4fd18b" stroke-width="2.4" stroke-dasharray="6 5" opacity="1"/>
+<path d="M480,362.0 C500.0,362.0 500.0,362.0 520,362.0" fill="none" stroke="#4fd18b" stroke-width="2.4" stroke-dasharray="6 5" opacity="1"/>
+<path d="M480,532.0 C500.0,532.0 500.0,512.0 520,512.0" fill="none" stroke="#4fd18b" stroke-width="2.4" stroke-dasharray="6 5" opacity="1"/>
+<path d="M480,532.0 C500.0,532.0 500.0,592.0 520,592.0" fill="none" stroke="#4fd18b" stroke-width="2.4" stroke-dasharray="6 5" opacity="1"/>
+<path d="M480,672.0 C500.0,672.0 500.0,672.0 520,672.0" fill="none" stroke="#4fd18b" stroke-width="2.4" stroke-dasharray="6 5" opacity="1"/>
+<path d="M480,762.0 C500.0,762.0 500.0,762.0 520,762.0" fill="none" stroke="#4fd18b" stroke-width="2.4" stroke-dasharray="6 5" opacity="1"/>
+<path d="M1000,172.0 C1020.0,172.0 1020.0,172.0 1040,172.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1000,252.0 C1020.0,252.0 1020.0,252.0 1040,252.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1000,362.0 C1020.0,362.0 1020.0,362.0 1040,362.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1000,512.0 C1020.0,512.0 1020.0,512.0 1040,512.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1000,592.0 C1020.0,592.0 1020.0,592.0 1040,592.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1000,672.0 C1020.0,672.0 1020.0,672.0 1040,672.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1000,762.0 C1020.0,762.0 1020.0,762.0 1040,762.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1520,172.0 C1540.0,172.0 1540.0,172.0 1560,172.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1520,252.0 C1540.0,252.0 1540.0,172.0 1560,172.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1520,362.0 C1540.0,362.0 1540.0,362.0 1560,362.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1520,512.0 C1540.0,512.0 1540.0,512.0 1560,512.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1520,592.0 C1540.0,592.0 1540.0,512.0 1560,512.0" fill="none" stroke="#4fd18b" stroke-width="2.4" opacity="1"/>
+<path d="M1760.0,140 C1760.0,70 260.0,90 260.0,160" fill="none" stroke="#4fd18b" stroke-width="2.4" stroke-dasharray="6 5" opacity="1"/>
+<rect x="40" y="160" width="440" height="64" rx="8" fill="#12181f" stroke="#b48cff" stroke-width="2" opacity="1"/>
+<text x="52" y="181" fill="#c9d1d9" font-size="13" font-weight="600">CLAUDE · plan_sol</text>
+<text x="52" y="201" fill="#b48cff" font-size="11.5">downlink · targets · hypotheses · jev ledger</text>
+<rect x="40" y="330" width="440" height="64" rx="8" fill="#12181f" stroke="#b48cff" stroke-width="2" opacity="1"/>
+<text x="52" y="351" fill="#c9d1d9" font-size="13" font-weight="600">CLAUDE · interpret</text>
+<text x="52" y="371" fill="#b48cff" font-size="11.5">instrument result vs. hypotheses</text>
+<rect x="40" y="500" width="440" height="64" rx="8" fill="#12181f" stroke="#b48cff" stroke-width="2" opacity="1"/>
+<text x="52" y="521" fill="#c9d1d9" font-size="13" font-weight="600">CLAUDE · objective</text>
+<text x="52" y="541" fill="#b48cff" font-size="11.5">a human&#x27;s request vs. the envelope</text>
+<rect x="40" y="640" width="440" height="64" rx="8" fill="#12181f" stroke="#b48cff" stroke-width="2" opacity="1"/>
+<text x="52" y="661" fill="#c9d1d9" font-size="13" font-weight="600">CLAUDE · report</text>
+<text x="52" y="681" fill="#b48cff" font-size="11.5">results vs. expected evidence</text>
+<rect x="40" y="730" width="440" height="64" rx="8" fill="#12181f" stroke="#b48cff" stroke-width="2" opacity="1"/>
+<text x="52" y="751" fill="#c9d1d9" font-size="13" font-weight="600">CLAUDE · plan_sol 3 (Rochette)</text>
+<text x="52" y="771" fill="#b48cff" font-size="11.5">abrade → PIXL → core?</text>
+<rect x="40" y="810" width="440" height="64" rx="8" fill="#0f1317" stroke="#b48cff" stroke-width="1.2" opacity="0.72"/>
+<text x="52" y="831" fill="#c9d1d9" font-size="13" font-weight="600">CLAUDE · anomaly</text>
+<text x="52" y="851" fill="#7f8b98" font-size="11.5">onboard triage + telemetry</text>
+<rect x="40" y="890" width="440" height="64" rx="8" fill="#0f1317" stroke="#b48cff" stroke-width="1.2" opacity="0.72"/>
+<text x="52" y="911" fill="#c9d1d9" font-size="13" font-weight="600">CLAUDE · describe (vision)</text>
+<text x="52" y="931" fill="#7f8b98" font-size="11.5">reads the Navcam frame · no jev: perception is the LLM&#x27;s</text>
+<rect x="520" y="140" width="480" height="64" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="2" opacity="1"/>
+<text x="532" y="161" fill="#c9d1d9" font-size="13" font-weight="600">score · target vs draft criteria ×4</text>
+<text x="532" y="181" fill="#d9a441" font-size="11.5">Máaz 2.98 · Bastide 0.16 · Rochette 0.41 · Yeehgo 0.12  (of 3)</text>
+<rect x="520" y="220" width="480" height="64" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="2" opacity="1"/>
+<text x="532" y="241" fill="#c9d1d9" font-size="13" font-weight="600">noul · activity order respects the rules</text>
+<text x="532" y="261" fill="#d9a441" font-size="11.5">Máaz 0.74 · drive budget check 0.74</text>
+<rect x="520" y="330" width="480" height="64" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="2" opacity="1"/>
+<text x="532" y="351" fill="#c9d1d9" font-size="13" font-weight="600">choice · next step at Máaz</text>
+<text x="532" y="371" fill="#d9a441" font-size="11.5">supercam_now 1.00  vs  drive_for_contact</text>
+<rect x="520" y="480" width="480" height="64" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="2" opacity="1"/>
+<text x="532" y="501" fill="#c9d1d9" font-size="13" font-weight="600">noul · activity bears on the objective ×2</text>
+<text x="532" y="521" fill="#d9a441" font-size="11.5">LIBS 0.92 · WATSON 0.76</text>
+<rect x="520" y="560" width="480" height="64" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="2" opacity="1"/>
+<text x="532" y="581" fill="#c9d1d9" font-size="13" font-weight="600">noul · target is what the requester thinks</text>
+<text x="532" y="601" fill="#d9a441" font-size="11.5">dark float = transported Séítah clast? 0.62</text>
+<rect x="520" y="640" width="480" height="64" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="2" opacity="1"/>
+<text x="532" y="661" fill="#c9d1d9" font-size="13" font-weight="600">noul · report self-check ×3</text>
+<text x="532" y="681" fill="#d9a441" font-size="11.5">= Máaz 0.96 · WATSON justified by rule 0.05 · Séítah clast 0.47</text>
+<rect x="520" y="730" width="480" height="64" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="2" opacity="1"/>
+<text x="532" y="751" fill="#c9d1d9" font-size="13" font-weight="600">noul · why was the order only 37 %? (follow-up)</text>
+<text x="532" y="771" fill="#d9a441" font-size="11.5">Claude split the check: PIXL before core 0.91 · cleared to core now 0.88</text>
+<rect x="520" y="810" width="480" height="64" rx="8" fill="#0f1317" stroke="#d9a441" stroke-width="1.2" opacity="0.72"/>
+<text x="532" y="831" fill="#c9d1d9" font-size="13" font-weight="600">noul · candidate action safe to command ×4</text>
+<text x="532" y="851" fill="#7f8b98" font-size="11.5">resume_visodom · back_up · stop · reimage</text>
+<rect x="520" y="890" width="480" height="54" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="532" y="911" fill="#c9d1d9" font-size="13" font-weight="600">one request per consultation</text>
+<text x="532" y="931" fill="#4fd18b" font-size="11.5">222–361 ms · 1–6 questions</text>
+<rect x="1040" y="140" width="480" height="64" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1052" y="161" fill="#c9d1d9" font-size="13" font-weight="600">plan commits Máaz first</text>
+<text x="1052" y="181" fill="#4fd18b" font-size="11.5">Bastide/Rochette deferred: low scores against *this sol&#x27;s* criteria</text>
+<rect x="1040" y="220" width="480" height="64" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1052" y="241" fill="#c9d1d9" font-size="13" font-weight="600">order kept: Mastcam-Z → LIBS → WATSON</text>
+<text x="1052" y="261" fill="#4fd18b" font-size="11.5">0.74 ≥ 0.5 — sequencing rule holds</text>
+<rect x="1040" y="330" width="480" height="64" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1052" y="351" fill="#c9d1d9" font-size="13" font-weight="600">rationale cites jev</text>
+<text x="1052" y="371" fill="#4fd18b" font-size="11.5">“jev&#x27;s choice check confirms supercam_now … confidence 1.0”</text>
+<rect x="1040" y="480" width="480" height="64" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1052" y="501" fill="#c9d1d9" font-size="13" font-weight="600">objective plan: LIBS then WATSON</text>
+<text x="1052" y="521" fill="#4fd18b" font-size="11.5">both ≥ 0.5 — nothing dropped; approach required</text>
+<rect x="1040" y="560" width="480" height="64" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1052" y="581" fill="#c9d1d9" font-size="13" font-weight="600">assessment hedged</text>
+<text x="1052" y="601" fill="#4fd18b" font-size="11.5">0.62 → ‘partial’: worth LIBS first, WATSON only if chemistry says so</text>
+<rect x="1040" y="640" width="480" height="64" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1052" y="661" fill="#c9d1d9" font-size="13" font-weight="600">report says so</text>
+<text x="1052" y="681" fill="#4fd18b" font-size="11.5">“refuted — basalt; WATSON ran on a rule the data did not meet”</text>
+<rect x="1040" y="730" width="480" height="64" rx="8" fill="#12181f" stroke="#4fd18b" stroke-width="2" opacity="1"/>
+<text x="1052" y="751" fill="#c9d1d9" font-size="13" font-weight="600">core committed, PIXL first</text>
+<text x="1052" y="771" fill="#4fd18b" font-size="11.5">a low score became two narrower questions, then a decision</text>
+<rect x="1040" y="810" width="480" height="64" rx="8" fill="#0f1317" stroke="#4fd18b" stroke-width="1.2" opacity="0.72"/>
+<text x="1052" y="831" fill="#c9d1d9" font-size="13" font-weight="600">action picked from the safe set</text>
+<text x="1052" y="851" fill="#7f8b98" font-size="11.5">diagnosis + constraints_for_onboard</text>
+<rect x="1560" y="480" width="400" height="64" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="2" opacity="1"/>
+<text x="1572" y="501" fill="#c9d1d9" font-size="13" font-weight="600">JEV · verify each step (onboard)</text>
+<text x="1572" y="521" fill="#d9a441" font-size="11.5">serves / prerequisites / risk ≥ 0.5 → swimlane</text>
+<rect x="1560" y="330" width="400" height="64" rx="8" fill="#12181f" stroke="#d9a441" stroke-width="2" opacity="1"/>
+<text x="1572" y="351" fill="#c9d1d9" font-size="13" font-weight="600">JEV · AEGIS target selection (onboard)</text>
+<text x="1572" y="371" fill="#d9a441" font-size="11.5">score vs. the criteria Claude wrote</text>
+<rect x="1560" y="140" width="400" height="64" rx="8" fill="#12181f" stroke="#5aa7e6" stroke-width="2" opacity="1"/>
+<text x="1572" y="161" fill="#c9d1d9" font-size="13" font-weight="600">CODE · execute the plan</text>
+<text x="1572" y="181" fill="#5aa7e6" font-size="11.5">ENav · Navcam/Hazcam checks · vetoes · ledger → next plan</text>
+<text x="40" y="1092" fill="#aab4bf" font-size="12">Measured on the ROS 2 run: 18 Claude calls, 13 of them consulted jev — 13 consultations, 33 questions, 222–361 ms each; the rover itself made 96 jev requests while driving.</text>
+<text x="40" y="1112" fill="#aab4bf" font-size="12">A consultation costs Claude nothing extra: jev answers in the time a token takes. The dashed loop is the onboard ledger fed back into the next plan.</text>
+<rect x="40" y="1138" width="14" height="14" rx="3" fill="#0f1317" stroke="#b48cff" stroke-width="1.5"/><text x="62" y="1150" fill="#aab4bf" font-size="12">Claude task</text>
+<rect x="340" y="1138" width="14" height="14" rx="3" fill="#0f1317" stroke="#d9a441" stroke-width="1.5"/><text x="362" y="1150" fill="#aab4bf" font-size="12">jev question · typed answer</text>
+<rect x="640" y="1138" width="14" height="14" rx="3" fill="#0f1317" stroke="#4fd18b" stroke-width="1.5"/><text x="662" y="1150" fill="#aab4bf" font-size="12">Claude&#x27;s use of the answer</text>
+<rect x="940" y="1138" width="14" height="14" rx="3" fill="#0f1317" stroke="#5aa7e6" stroke-width="1.5"/><text x="962" y="1150" fill="#aab4bf" font-size="12">onboard code</text>
+<rect x="1240" y="1138" width="14" height="14" rx="3" fill="#0f1317" stroke="#3a4450" stroke-width="1.5"/><text x="1262" y="1150" fill="#aab4bf" font-size="12">cost of the consultation</text>
+</svg>

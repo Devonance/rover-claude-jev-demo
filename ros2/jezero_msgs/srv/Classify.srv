@@ -1,0 +1,5 @@
+FeatureArray features
+string sun_words
+string ground_words
+---
+VerdictArray verdicts
