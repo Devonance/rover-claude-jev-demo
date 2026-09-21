@@ -9,7 +9,7 @@ import html
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parents[1] / "docs" / "decision-graph.svg"
-W, H = 2000, 1180
+W, H = 2000, 1200
 BG, DIM, INK, GOLD, GREEN, BLUE, PURPLE, PINK, HOT = "#0b0d10", "#3a4450", "#c9d1d9", "#d9a441", "#4fd18b", "#5aa7e6", "#b48cff", "#ff8fb1", "#ea6a5a"
 
 nodes = {}  # id -> dict(x,y,w,h,title,sub,kind,on)
@@ -36,7 +36,7 @@ node("s_feat2", X_STATE, 320, "navcam feature v7_1", "dark blocky rock 0.3 m · 
 node("s_crit", X_STATE, 420, "criteria (from CLAUDE)", "“prioritise targets whose tone/texture differs from Máaz…”", "state", w=470, h=64)
 node("s_cand", X_STATE, 520, "candidates in view", "Máaz + Navcam read · rock in view 1 · rock in view 2", "state", w=470)
 node("s_arm", X_STATE, 600, "arm workspace", "gentle tilt · firm pavement · clear air", "state", w=470)
-node("s_tele", X_STATE, 700, "telemetry event", "46 % wheel slip over 2 m · VO converged · currents nominal", "state", w=470, h=64)
+node("s_tele", X_STATE, 700, "telemetry stream · every sample, 1 Hz", "this sample: 46 % wheel slip over 2 m · VO converged · trends", "state", w=470, h=64)
 node("s_obj", X_STATE, 800, "objective (USER)", "“Is this light-toned float a Séítah rock? LIBS + WATSON…”", "state", w=470, h=64)
 node("s_plan", X_STATE, 900, "planned activity a0..a2", "Mastcam-Z → LIBS → WATSON · comes_after · uses_the_arm", "state", w=470, h=64)
 
@@ -103,9 +103,9 @@ def colour(kind):
 out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="ui-monospace, Consolas, Menlo, monospace">',
        f'<rect width="{W}" height="{H}" fill="{BG}"/>',
        f'<text x="40" y="70" fill="{INK}" font-size="22" font-weight="700">JEZERO OPS · DECISION GRAPH</text>',
-       f'<text x="40" y="96" fill="#7f8b98" font-size="13">state → jev typed questions (live answers) → code gates → actions · highlighted: one real imaging cycle, sol 1, odometer 57 m — a ripple field becomes a keep-out and the route bends</text>',
+       f'<text x="40" y="96" fill="#7f8b98" font-size="13">state → jev typed questions (live answers) → code gates → actions · highlighted: one real NAVCAM planning cycle, sol 1, odometer 57 m — a ripple field becomes a keep-out and the route bends</text>',
        f'<text x="{X_STATE}" y="136" fill="#7f8b98" font-size="11" letter-spacing="2">STATE (words &amp; structured fields)</text>',
-       f'<text x="{X_Q}" y="136" fill="{GOLD}" font-size="11" letter-spacing="2">JEV · SYSTEM ONE (≈200 ms, one request per column)</text>',
+       f'<text x="{X_Q}" y="136" fill="{GOLD}" font-size="11" letter-spacing="2">JEV · SYSTEM ONE (≈250 ms, one request per column)</text>',
        f'<text x="{X_GATE}" y="136" fill="{BLUE}" font-size="11" letter-spacing="2">CODE · GATES &amp; GEOMETRY</text>',
        f'<text x="{X_ACT}" y="136" fill="{GREEN}" font-size="11" letter-spacing="2">ACTIONS</text>',
        f'<text x="{X_Q}" y="18" fill="{PURPLE}" font-size="11" letter-spacing="2">CLAUDE · SYSTEM TWO (15–80 s, a few times per sol)</text>']
@@ -152,6 +152,9 @@ for k, label in (("state", "state (filtered, words)"), ("jev", "jev question · 
     out.append(f'<rect x="{lx}" y="{ly-12}" width="14" height="14" rx="3" fill="#0f1317" stroke="{colour(k)}" stroke-width="1.5"/><text x="{lx+22}" y="{ly}" fill="#aab4bf" font-size="12">{esc(label)}</text>')
     lx += 260
 out.append(f'<rect x="{lx}" y="{ly-12}" width="14" height="14" rx="3" fill="#12181f" stroke="{GREEN}" stroke-width="2"/><text x="{lx+22}" y="{ly}" fill="#aab4bf" font-size="12">taken this cycle</text>')
+# This graph is one Navcam planning cycle. It is not the whole drive loop: before any wheel
+# is committed every camera pair is asked at once, and the arm has its own collision gates.
+out.append(f'<text x="40" y="{ly+30}" fill="#7f8b98" font-size="12">One Navcam planning cycle. The near-field check before every wheel commit asks all four camera pairs in one request, and the arm has its own collision gates — see decision-graph-3 for all fourteen uses of jev.</text>')
 out.append("</svg>")
 OUT.write_text("\n".join(out), encoding="utf-8")
 print("wrote", OUT, len(nodes), "nodes", len(edges), "edges")

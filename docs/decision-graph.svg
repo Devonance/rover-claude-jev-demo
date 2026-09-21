@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1180" viewBox="0 0 2000 1180" font-family="ui-monospace, Consolas, Menlo, monospace">
-<rect width="2000" height="1180" fill="#0b0d10"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1200" viewBox="0 0 2000 1200" font-family="ui-monospace, Consolas, Menlo, monospace">
+<rect width="2000" height="1200" fill="#0b0d10"/>
 <text x="40" y="70" fill="#c9d1d9" font-size="22" font-weight="700">JEZERO OPS · DECISION GRAPH</text>
-<text x="40" y="96" fill="#7f8b98" font-size="13">state → jev typed questions (live answers) → code gates → actions · highlighted: one real imaging cycle, sol 1, odometer 57 m — a ripple field becomes a keep-out and the route bends</text>
+<text x="40" y="96" fill="#7f8b98" font-size="13">state → jev typed questions (live answers) → code gates → actions · highlighted: one real NAVCAM planning cycle, sol 1, odometer 57 m — a ripple field becomes a keep-out and the route bends</text>
 <text x="40" y="136" fill="#7f8b98" font-size="11" letter-spacing="2">STATE (words &amp; structured fields)</text>
-<text x="590" y="136" fill="#d9a441" font-size="11" letter-spacing="2">JEV · SYSTEM ONE (≈200 ms, one request per column)</text>
+<text x="590" y="136" fill="#d9a441" font-size="11" letter-spacing="2">JEV · SYSTEM ONE (≈250 ms, one request per column)</text>
 <text x="1100" y="136" fill="#5aa7e6" font-size="11" letter-spacing="2">CODE · GATES &amp; GEOMETRY</text>
 <text x="1630" y="136" fill="#4fd18b" font-size="11" letter-spacing="2">ACTIONS</text>
 <text x="590" y="18" fill="#b48cff" font-size="11" letter-spacing="2">CLAUDE · SYSTEM TWO (15–80 s, a few times per sol)</text>
@@ -92,8 +92,8 @@
 <text x="52" y="621" fill="#aab4bf" font-size="13" font-weight="600">arm workspace</text>
 <text x="52" y="640" fill="#7f8b98" font-size="11.5">gentle tilt · firm pavement · clear air</text>
 <rect x="40" y="700" width="470" height="64" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2" opacity="0.72"/>
-<text x="52" y="721" fill="#aab4bf" font-size="13" font-weight="600">telemetry event</text>
-<text x="52" y="740" fill="#7f8b98" font-size="11.5">46 % wheel slip over 2 m · VO converged · currents nominal</text>
+<text x="52" y="721" fill="#aab4bf" font-size="13" font-weight="600">telemetry stream · every sample, 1 Hz</text>
+<text x="52" y="740" fill="#7f8b98" font-size="11.5">this sample: 46 % wheel slip over 2 m · VO converged · trends</text>
 <rect x="40" y="800" width="470" height="64" rx="8" fill="#0f1317" stroke="#3a4450" stroke-width="1.2" opacity="0.72"/>
 <text x="52" y="821" fill="#aab4bf" font-size="13" font-weight="600">objective (USER)</text>
 <text x="52" y="840" fill="#7f8b98" font-size="11.5">“Is this light-toned float a Séítah rock? LIBS + WATSON…”</text>
@@ -205,4 +205,5 @@
 <rect x="820" y="1108" width="14" height="14" rx="3" fill="#0f1317" stroke="#4fd18b" stroke-width="1.5"/><text x="842" y="1120" fill="#aab4bf" font-size="12">action</text>
 <rect x="1080" y="1108" width="14" height="14" rx="3" fill="#0f1317" stroke="#b48cff" stroke-width="1.5"/><text x="1102" y="1120" fill="#aab4bf" font-size="12">Claude (slow loop, dashed)</text>
 <rect x="1340" y="1108" width="14" height="14" rx="3" fill="#12181f" stroke="#4fd18b" stroke-width="2"/><text x="1362" y="1120" fill="#aab4bf" font-size="12">taken this cycle</text>
+<text x="40" y="1150" fill="#7f8b98" font-size="12">One Navcam planning cycle. The near-field check before every wheel commit asks all four camera pairs in one request, and the arm has its own collision gates — see decision-graph-3 for all fourteen uses of jev.</text>
 </svg>
