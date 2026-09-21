@@ -5,7 +5,7 @@
 
 > **This is a demo.** Not flight software, not a research result, and not validated against any real rover. It exists to make one idea visible: that a robot’s decisions split into two kinds, and that two very different models can take the two kinds.
 
-**Video:** [`jezero-ops-demo-720p.mp4`](jezero-ops-demo-720p.mp4) (120 s, re-timed; see §5a.5)
+**Video:** <https://youtu.be/X4679Fy1Epc> (120 s, re-timed; see §5a.5)
 **Code:** <https://github.com/Devonance/rover-claude-jev-demo>
 
 ---

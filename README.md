@@ -3,13 +3,9 @@
 **This is a demo. It is not flight software, it is not a research result, and nothing here has been validated against a real rover.** It is a toy built to make one idea visible: that a robot's decisions split into two kinds, and that you can use two very different models for the two kinds and watch the seam between them.
 
 A simulated Perseverance drives itself across real USGS Jezero Crater terrain. It sees rocks with cameras, decides what is a hazard, plans science, puts an arm on a rock, and reports back. Three different things make those decisions, and every decision on screen is labelled with which one made it.
+[![Jezero Ops — watch the run](docs/figs/coverage-map.jpg)](https://youtu.be/X4679Fy1Epc)
 
-
-[![Jezero Ops — the run](docs/figs/coverage-map.jpg)](https://youtu.be/X4679Fy1Epc)
-
-
-
-— a full three-sol run, re-timed. The moments where a decision changes something play at real time; the waiting in between is compressed, with the multiplier shown in the corner throughout.
+**[▶ Watch the run on YouTube (120 s)](https://youtu.be/X4679Fy1Epc)** — a full three-sol run, re-timed. The moments where a decision changes something play at real time; the waiting in between is compressed, with the multiplier shown in the corner throughout.
 
 ---
 
@@ -119,6 +115,14 @@ Every camera's depth frame is splatted onto the ground as a coverage map. The oc
 Every place jev is asked something, what it is asked, and what code does with the answer. The lit path is one real cycle: a bright ripple field scores 0.74 sinkage risk, code adds a 6 m keep-out, 8 of 9 arcs are blocked, the route bends.
 
 Claude built this graph, and then got it back as a tool. `tools/mcp_jev_server.mjs` exposes `ask_jev(state, questions)` over MCP, so Claude can consult System One mid-reasoning — score candidates against its own draft criteria, check an ordering, break a tie — and treat the answers as evidence rather than commands. [`docs/decision-graph-2.png`](docs/decision-graph-2.png) traces what it asked and what it did with the answers.
+
+### Every place jev is used
+
+![Decision graph III — the fourteen uses of jev](docs/decision-graph-3.png)
+
+The current picture, one row per use: the stream code turns into words, the typed questions, the cadence, and the rule that consumes the answer along with the flight rule it enforces. Row 1 is the whole-rig sweep, row 6 is the telemetry stream at 1 Hz, rows 9 and 10 are the arm. Row 14 is jev inside Claude's own reasoning. Regenerate with `python tools/decision_graph3.py`.
+
+**jev is never asked what to do next.** That is always a rule, and every rule cites the flight rule it enforces.
 
 ---
 
