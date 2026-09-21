@@ -18,8 +18,6 @@ shots/
 *.webm
 *.mp4
 *.zip
-# ...except the web-sized cut the README embeds
-!docs/jezero-ops-demo-720p.mp4
 
 # LaTeX intermediates
 docs/*.log
