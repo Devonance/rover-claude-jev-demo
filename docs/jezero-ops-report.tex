@@ -5,6 +5,13 @@
 \usepackage{lmodern}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{colortbl}
+% Booktabs leaves rows unruled on purpose, which reads well when every cell is one line.
+% These tables have cells that wrap to three lines, and without a separator the eye loses
+% which fragment belongs to which row. A hairline in light grey is enough to hold the row
+% together without turning the table into a grid.
+\newcommand{\rowrule}{\arrayrulecolor{black!22}\midrule\arrayrulecolor{black}}
+\renewcommand{\arraystretch}{1.18}
 \usepackage{enumitem}
 \usepackage{rotating}
 \usepackage{hyperref}
@@ -29,7 +36,7 @@
 \begin{center}\fbox{\parbox{0.92\textwidth}{\small\textbf{This is a demo.} Not flight software, not a research result, and not validated against any real rover. It exists to make one idea visible: that a robot's decisions split into two kinds, and that two very different models can take the two kinds.}}\end{center}
 
 \begin{abstract}
-A Mars rover has two kinds of thinking to do: slow, deliberate, argued-from-evidence planning and interpretation, and fast, narrow, high-frequency judgment. JPL splits these between a ground team and onboard flight software. We split them between two very different AI systems and made the split visible on screen. \textcolor{claude}{\textbf{Claude}}, a large language model, plays the science team and tactical planners. \textcolor{jev}{\textbf{jev}}, TypeSafe's System One model, plays the onboard judgment, returning typed answers with calibrated probabilities in about 200\,ms. \textcolor{code}{\textbf{Code}} owns everything that should never be a judgment call: geometry, budgets, thresholds, and the state machine. The result is a playable, recorded simulation of Perseverance on real USGS Jezero terrain, in which every decision is attributed to the engine that made it. It was built twice in one day: first as a browser prototype (HTML, CSS and three.js with a small Node server), then moved onto ROS\,2 Jazzy, where the browser became only the simulator and every decision became a node with a typed interface. All screenshots in this report are from the ROS\,2 run. In a later pass jev also became a tool \emph{inside} Claude's reasoning, so that part of the slow mind's work is done by fast judgment. The graph is flight-like: Claude calls are ROS\,2 actions with feedback and cancel, the executive is a behaviour tree, and jev reads every telemetry sample. The final pass stopped asserting and started measuring, and found two defects that qualitative description had hidden: a shadow-dropout model that tore shadowed boulders into fragments and reported them as flat shadows, and an arm collision model that under-estimated the turret by a factor of seven, letting it be driven into a rock while reporting clearance. Both are fixed and the fixes are quantified. The measurements also set the science stand-off, which had been chosen rather than derived. In the recorded run jev answered about 2\,900 typed questions across 760 calls for \$0.03, against \$1.10 for 16 Claude calls --- the economic argument for the split, in two numbers.
+A Mars rover has two kinds of thinking to do: slow, deliberate, argued-from-evidence planning and interpretation, and fast, narrow, high-frequency judgment. JPL splits these between a ground team and onboard flight software. We split them between two very different AI systems and made the split visible on screen. \textcolor{claude}{\textbf{Claude}}, a large language model, plays the science team and tactical planners. \textcolor{jev}{\textbf{jev}}, TypeSafe's System One model, plays the onboard judgment, returning typed answers with calibrated probabilities in about 250\,ms. \textcolor{code}{\textbf{Code}} owns everything that should never be a judgment call: geometry, budgets, thresholds, and the state machine. The result is a playable, recorded simulation of Perseverance on real USGS Jezero terrain, in which every decision is attributed to the engine that made it. It was built twice in one day: first as a browser prototype (HTML, CSS and three.js with a small Node server), then moved onto ROS\,2 Jazzy, where the browser became only the simulator and every decision became a node with a typed interface. All screenshots in this report are from the ROS\,2 run. In a later pass jev also became a tool \emph{inside} Claude's reasoning, so that part of the slow mind's work is done by fast judgment. The graph is flight-like: Claude calls are ROS\,2 actions with feedback and cancel, the executive is a behaviour tree, and jev reads every telemetry sample. The final pass stopped asserting and started measuring, and found two defects that qualitative description had hidden: a shadow-dropout model that tore shadowed boulders into fragments and reported them as flat shadows, and an arm collision model that under-estimated the turret by a factor of seven, letting it be driven into a rock while reporting clearance. Both are fixed and the fixes are quantified. The measurements also set the science stand-off, which had been chosen rather than derived. In the recorded run jev answered about 2\,900 typed questions across 760 calls for \$0.03, against \$1.10 for 13 Claude calls --- the economic argument for the split, in two numbers.
 \end{abstract}
 
 \section{Why two models and not one}
@@ -45,10 +52,15 @@ The architecture therefore follows one rule twice, at two speeds: \emph{code own
  & \textcolor{claude}{\textbf{CLAUDE} (System Two)} & \textcolor{jev}{\textbf{JEV} (System One)} & \textcolor{code}{\textbf{CODE}} \\
 \midrule
 Role & science team and rover planners & onboard judgment & flight rules, geometry, budgets \\
+\rowrule
 Input & everything: downlink, targets, hypotheses, history, Navcam frames & a filtered JSON state and typed questions & numbers \\
+\rowrule
 Output & plan / interpretation / report against a JSON schema & a probability per option, plus confidence & deterministic \\
-Latency & 15--80\,s & 200--300\,ms & microseconds \\
+\rowrule
+Latency & 15--125\,s & about 250\,ms & microseconds \\
+\rowrule
 Called & a few times per sol & at every decision point & continuously \\
+\rowrule
 Never asked to & pick an arc, classify a blob & plan, reason, generate text, do arithmetic & judge anything semantic \\
 \bottomrule
 \end{tabular}
@@ -157,7 +169,9 @@ The demo perceives with one mast camera and a depth buffer. Perseverance carries
 Camera group & Range / role & jev questions (per feature) & Code gate \\
 \midrule
 Navcam pair (mast) & 3--20\,m; plan the arc & feature type, wheel hazard, sinkage, science interest & perception map, keep-outs, confidence floor $\to$ re-image \\
+\rowrule
 Front Hazcam pairs & 0.3--4\,m; ground under and just ahead of the front wheels, arm workspace & \emph{about to roll onto it?} (Noul), \emph{rock or shadow at wheel scale?} (Choice), \emph{arm can deploy?} (Noul) & veto the next step if $P(\text{roll-over hazard})>0.5$; halt if unsure \\
+\rowrule
 Rear Hazcam pair & 0.3--4\,m behind; reversing & same as front, mirrored & reverse arcs only from what the rear pair has cleared \\
 \bottomrule
 \end{tabular}
@@ -252,7 +266,7 @@ So in this version jev is also a tool \emph{inside} Claude's reasoning. The Clau
 \end{figure}
 
 \subsection{How much is real time?}
-Measured on the recorded run: \textbf{18 Claude calls, 13 of which consulted jev --- 13 consultations, 33 typed questions, 222--361\,ms each}. Against that, the rover itself made 96 jev requests while driving (38 Navcam, 51 Hazcam, plus AEGIS, fault triage and verification). So about 12\,\% of all System One calls happen inside System Two's reasoning, and a consultation adds under half a second to a call that takes 15--95\,s: jev answers in the time a token takes. The other direction is the ledger: at every uplink Claude is told what jev decided while driving --- frames judged, obstacles and keep-outs added, vetoes, reads below the confidence floor, the ground classes seen --- so the slow mind plans on what the fast mind found.
+Measured on the recorded run: \textbf{13 Claude calls (9 planning and interpretation, 4 vision reads), and every one of the 9 that was told it could consult jev did so --- 9 consultations, 39 typed questions, 252--345\,ms each}. Against that, the rover itself made 760 jev calls carrying about 2\,900 typed questions. So the in-Claude share is now about 1\,\% of all System One calls, and it is worth being exact about why that fell from the 12\,\% an earlier pass measured: not because the planner consults less, but because the onboard cadence rose roughly eightfold once the whole camera rig and the whole telemetry stream started going to jev. A consultation still adds under half a second to a call that takes 15--125\,s: jev answers in the time a token takes. The other direction is the ledger: at every uplink Claude is told what jev decided while driving --- frames judged, obstacles and keep-outs added, vetoes, reads below the confidence floor, the ground classes seen --- so the slow mind plans on what the fast mind found.
 
 \subsection{What the demo shows about the split}
 Three things the consultations did that neither engine could do alone. \emph{Calibrated doubt on Claude's own draft}: jev scored Rochette 0.41 against sol-1 criteria written for M\'aaz, and the plan deferred it --- a planner's draft was checked by the onboard judge before uplink. \emph{An honest audit of Claude's report}: asked whether its WATSON run was justified by the rule it had itself set (``only if the chemistry says so''), jev said 0.05, and the report says the run was not warranted. \emph{Decomposition under uncertainty}: a low ordering score became two narrower questions (PIXL before core? cleared to core now?) rather than a guess. None of this is jev reasoning --- it cannot --- and none of it is Claude judging its own calibration --- it cannot. The reasoning stays in System Two; the calibrated judgment stays in System One; the boundary now runs \emph{through} the LLM's chain of thought, and it is still drawn in code and visible on screen.
@@ -351,7 +365,7 @@ The three colours on screen are the audit trail, not decoration. The green ticks
 \label{sec:ros2}
 The same graph now runs as a ROS\,2 Jazzy system (Ubuntu 24.04 under WSL\,2). The browser keeps only what a simulator owns --- terrain, the rover's motion, the camera rig, rendering, the HUD --- and talks to the graph over rosbridge; perception, jev judgment, ENav, the LLM planner and the sol executive are nodes with typed interfaces (\texttt{jezero\_msgs}: 22 messages, 7 services; Figure~\ref{fig:rosgraph}). Every decision is a \texttt{Decision} message carrying its engine, so a bag replays the attribution stream. A full three-sol run --- plans, the perception loop, science stops with Claude reading the Navcam frame, a user objective verified by jev and reported by Claude, and Claude consulting jev while it reasons --- completed over the graph with no node errors and is recorded as \texttt{jezero-ops-ros2-v2-1080p.mp4}.
 
-The port is also where Section~\ref{sec:cameras} became real (Figure~\ref{fig:rig}): the simulator renders the nine engineering cameras, each stereo pair produces its own point cloud, and the executive's drive loop asks jev about the Navcam pair every 6\,m, the front Hazcam pair before every 3\,m segment and again mid-arc, and the rear pair before any reverse. jev is asked only about features that are new, inside the wheel corridor, and not already cleared by geometry; a \emph{veto} puts the rock into the perception map and ENav re-plans before a wheel moves. In the recorded three-sol run (24 minutes) that was 314 front-Hazcam and 28 rear-Hazcam frames reduced to 51 near-field jev calls and 36 vetoes, on top of 56 Navcam cycles, 203 forward and 35 reverse ENav evaluations, and 18 Claude calls (\$2.01), with no node errors. Reversing no longer reads the world's rock list: the rear Hazcams see for themselves. \texttt{docs/ros2-migration.md} has the node table, the run recipe and what is still a simulator shortcut.
+The port is also where Section~\ref{sec:cameras} became real (Figure~\ref{fig:rig}): the simulator renders the nine engineering cameras, each stereo pair produces its own point cloud, and the executive's drive loop asks jev about the Navcam pair every 6\,m, and puts the \emph{whole rig} --- all four camera pairs at once --- to jev before any wheel is committed and again mid-arc, with the rear pair before any reverse. jev is asked only about features that are new, inside the wheel corridor, and not already cleared by geometry; a \emph{veto} puts the rock into the perception map and ENav re-plans before a wheel moves. In the recorded three-sol run (22 minutes) that was 37 whole-rig sweeps and 27 vetoes, 622 health verdicts at 1\,Hz of which 93 were non-nominal, 760 jev calls carrying about 2\,900 typed questions, and 13 Claude calls (\$1.10 against \$0.03 of jev), with no node errors. Reversing no longer reads the world's rock list: the rear Hazcams see for themselves. \texttt{docs/ros2-migration.md} has the node table, the run recipe and what is still a simulator shortcut.
 
 \begin{figure}[p]
 \centering
@@ -417,6 +431,13 @@ At 2.3\,m the arm has to stretch out nearly flat over the rock to reach its top,
 Each camera's depth frame is splatted into a world-space coverage map. The occlusion is exact by construction rather than by a shadow test, because the splat \emph{is} what the depth buffer recorded: the ground behind a rock was never measured, so it is never marked. Parking the rover 7\,m from each of the ten largest rocks in the area and sampling the map inside the geometric shadow and beside it at the same range gives mean coverage behind a rock 0.10, beside it 0.87, with nine of ten casting a proper shadow.
 
 One instructive failure along the way: an early version stretched each splat along the view ray to hide striping in the far field. A splat from a rock's \emph{top} surface then spilled past the rock and painted the ground behind it, filling in the occlusion shadow the map exists to show. The striping is the honest artefact; the smoothing was the lie.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figs/coverage-map.jpg}
+\caption{The coverage map, mid-drive. Each camera group paints in its own colour: green Navcam out to 20\,m, blue front Hazcams in the near field, violet rear, magenta Mastcam-Z. Pale ground behind the rover is everywhere the rig has held a clear line. The console shows a confidence gate resolving: jev returned \texttt{shadow\_only} at 0.32, below the 0.55 floor, so code refused to act, raised the mast and re-imaged; the second look came back \texttt{loose\_rock} at 0.67 with 0.46\,m of measured relief, and the rock went into the perception map.}
+\label{fig:coverage}
+\end{figure}
 
 \subsection{jev at a cadence an LLM could not reach}
 Before any wheel is committed, and again mid-arc, every camera pair images and everything new in the corridor goes to jev in one request; one veto from any pair stops the move. And jev now reads every telemetry sample, roughly one a second, with trend terms so a channel on its way somewhere is caught before it trips a limit.

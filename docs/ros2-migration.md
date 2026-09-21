@@ -61,7 +61,7 @@ Sol (Selector, no memory)          re-evaluated every tick (2 Hz), safety first
 | 3 | frame usability | Noul usable · Choice cause | with 1 | FR-08: do not plan on a bad frame; mast pan, re-image |
 | 4 | front Hazcam pairs (near field) | same four, wheel-scale | before every 3 m segment and mid-arc | veto → perception map / keep-out, ENav re-plans (FR-06) |
 | 5 | rear Hazcam pair | same, mirrored | before any reverse | FR-07 |
-| 6 | **rover health** (telemetry stream) | Choice fault class · Noul stop · Noul needs ground | 1 Hz sampled, asked on change or every 10 s while driving | halt (FR-11), escalate to the ground action, cancel/re-issue on class change |
+| 6 | **rover health** (telemetry stream) | Choice fault class · Noul stop · Noul needs ground | every sample, 1 Hz | halt (FR-11), escalate to the ground action, cancel/re-issue on class change |
 | 7 | sequence review before uplink | Noul serves · Noul order · Noul risk, per planned activity | once per sol | drop what fails, report to the planners (FR-10) |
 | 8 | AEGIS-style target selection | Score match · Choice instrument · Noul arm safe | each science stop | selection rule, arm rule (FR-09) |
 | 9 | **arm placement** (each contact-science activity) | Score placement quality · Noul collision risk, per candidate spot (top, near face, flanks — proposed by code from the rock geometry) | each arm activity | best acceptable spot, else no contact science; code unstows and moves the arm with IK (FR-09) |
@@ -92,7 +92,7 @@ are display only). The executive's drive loop then runs:
 3. **Rear Hazcam pair before any reverse** (ENav's escape arcs and the anomaly back-up) — which
    also removed the last "truth" shortcut: reversing used to read the world's rock list.
 4. **Final approach**: inside 7 m the target rock itself sits in the perception map and would veto
-   every arc into the stand-off, so code commands a straight bump to the 2.6 m stand-off, with a
+   every arc into the stand-off, so code commands a straight bump to the 1.6 m stand-off (measured from the arm envelope: reach 2.05 m, turret 0.84 m across), with a
    Hazcam check that excludes the target.
 
 The recorded three-sol run (24 min, `ros2/stats.sh`, `docs/ros2/stats-final.txt`): 56 Navcam frames,
@@ -104,7 +104,7 @@ frames became 51 questions.
 
 ## 2a. System One inside System Two
 
-`claude_planner_node` launches the CLI with `--mcp-config tools/mcp-jev.json --allowedTools mcp__jev__ask_jev --output-format stream-json`. The MCP server is a 60-line Node stdio process that forwards `ask_jev(state, questions, note)` to the TypeSafe API and logs each call (`out/mcp_jev.log`). The node parses the stream for `tool_use`/`tool_result` pairs and returns them as `consults_json`; the executive counts them (`Hud.jev_in_claude`), publishes them under the Claude card (`Decision.payload_json.consults`) and emits `mind` view commands so the browser's strip can draw Claude's thinking interval with the consultations inside it. On the recorded run: 18 Claude calls, 13 with consultations, 13 consultations, 33 questions, 222–361 ms; 96 onboard jev requests. `ros2/stats.sh` prints all of it from the launch log.
+`claude_planner_node` launches the CLI with `--mcp-config tools/mcp-jev.json --allowedTools mcp__jev__ask_jev --output-format stream-json`. The MCP server is a 60-line Node stdio process that forwards `ask_jev(state, questions, note)` to the TypeSafe API and logs each call (`out/mcp_jev.log`). The node parses the stream for `tool_use`/`tool_result` pairs and returns them as `consults_json`; the executive counts them (`Hud.jev_in_claude`), publishes them under the Claude card (`Decision.payload_json.consults`) and emits `mind` view commands so the browser's strip can draw Claude's thinking interval with the consultations inside it. On the recorded run: 13 Claude calls, 9 of them able to consult and all 9 doing so, 39 questions, 252–345 ms; 760 onboard jev calls carrying about 2,900 typed questions. `ros2/stats.sh` prints all of it from the launch log.
 
 Other goal-2 additions: `FLIGHT_RULES` and `SLIP_BY_CLASS` in `world.py`; a `ground__class` Choice added to every Navcam classification (`questions.hazard_questions(..., ground_words)`), mapped to predicted slip and shown in the HUD; `CostMap` on `/nav/costmap` from ENav, drawn by `view.costmap()`; camera frusta drawn on capture; `Hud` carries `slip_pct`, `ground_class`, `jev_calls`, `jev_in_claude`, `claude_calls`.
 

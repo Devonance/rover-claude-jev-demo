@@ -42,7 +42,7 @@ never touch hardware directly.
 - Near-field checks (front/rear Hazcam pairs) run before every segment and mid-arc (FR-06/07); with
   real cameras the cadence is bounded by stereo throughput (~1–2 Hz per pair), which is still well
   above the ~300 ms a jev request takes.
-- The health monitor asks jev only on a change of the worded state or every 10 s while driving, so
+- The health monitor asks jev about every telemetry sample at 1 Hz, so
   the request rate stays low even with a 1 Hz telemetry stream.
 - Everything the models decide is published on `/ops/decisions` with its engine; a `rosbag2` of a
   drive replays every judgment against every input.
