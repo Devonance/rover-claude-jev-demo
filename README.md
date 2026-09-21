@@ -4,9 +4,12 @@
 
 A simulated Perseverance drives itself across real USGS Jezero Crater terrain. It sees rocks with cameras, decides what is a hazard, plans science, puts an arm on a rock, and reports back. Three different things make those decisions, and every decision on screen is labelled with which one made it.
 
-[![Jezero Ops — the run](docs/figs/coverage-map.jpg)](docs/jezero-ops-demo-720p.mp4)
 
-**[▶ Watch the run (120 s)](docs/jezero-ops-demo-720p.mp4)** — a full three-sol run, re-timed. The moments where a decision changes something play at real time; the waiting in between is compressed, with the multiplier shown in the corner throughout.
+[![Jezero Ops — the run](docs/figs/coverage-map.jpg)](https://youtu.be/X4679Fy1Epc)
+
+
+
+— a full three-sol run, re-timed. The moments where a decision changes something play at real time; the waiting in between is compressed, with the multiplier shown in the corner throughout.
 
 ---
 
